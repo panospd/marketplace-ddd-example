@@ -4,8 +4,4 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MarketPlace.Framework\MarketPlace.Framework.csproj" />
-  </ItemGroup>
-
 </Project>
