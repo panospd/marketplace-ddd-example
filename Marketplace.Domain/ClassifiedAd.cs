@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 
 namespace Marketplace.Domain
 {
@@ -9,13 +10,29 @@ namespace Marketplace.Domain
             Id = id;
             OwnerId = ownerId;
             State = ClassifiedAdState.Inactive;
+
+            EnsureValidState();
         }
 
         public ClassifiedAdId Id { get; }
 
-        public void SetTitle(ClassifiedAdTitle title) => Title = title;
-        public void UpdateText(ClassifiedAdText text) => Text = text;
-        public void UpdatePrice(Price price) => Price = price;
+        public void SetTitle(ClassifiedAdTitle title)
+        {
+            Title = title;
+            EnsureValidState();
+        }
+
+        public void UpdateText(ClassifiedAdText text)
+        {
+            Text = text;
+            EnsureValidState();
+        }
+
+        public void UpdatePrice(Price price)
+        {
+            Price = price;
+            EnsureValidState();
+        }
 
         public void RequestToPublish()
         {
@@ -29,6 +46,8 @@ namespace Marketplace.Domain
                 throw new InvalidEntityStateException(this, "price cannot be zero");
 
             State = ClassifiedAdState.PendingPreview;
+
+            EnsureValidState();
         }
 
         public ClassifiedAdTitle Title { get; private set; }
@@ -36,6 +55,30 @@ namespace Marketplace.Domain
         public ClassifiedAdText Text { get; private set; }
         public Price Price { get; private set; }
         public ClassifiedAdState State { get; private set; }
+        public UserId ApprovedBy { get; private set; }
+
+        protected void EnsureValidState()
+        {
+            var valid =
+                Id != null &&
+                OwnerId != null &&
+                (State switch
+                {
+                    ClassifiedAdState.PendingPreview =>
+                    Title != null &&
+                    Text != null &&
+                    Price?.Amount > 0,
+                    ClassifiedAdState.Active =>
+                    Title != null &&
+                    Text != null &&
+                    Price?.Amount > 0 &&
+                    ApprovedBy != null,
+                    _ => true
+                });
+
+            if(!valid)
+                throw new InvalidEntityStateException(this, $"Post-checks failed in state {State}");
+        }
     }
 
     public class InvalidEntityStateException : Exception

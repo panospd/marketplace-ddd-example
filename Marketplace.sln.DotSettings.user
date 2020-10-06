@@ -1,4 +1,14 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=072ba059_002D9c5e_002D4108_002D9256_002Dc222e7c7fb2d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ClassifiedAdd_Publish_Spec" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::DB86CA49-A2A0-4CE4-AD9C-41F5469F0EF7::.NETCoreApp,Version=v3.1::Marketplace.Tests.ClassifiedAdd_Publish_Spec&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=744e97ca_002D0892_002D4456_002Dafdf_002Dde4275ca938d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ClassifiedAdd_Publish_Spec #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::DB86CA49-A2A0-4CE4-AD9C-41F5469F0EF7::.NETCoreApp,Version=v3.1::Marketplace.Tests.ClassifiedAdd_Publish_Spec&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b9e1c68e_002Db4d2_002D4131_002Db444_002D379af7d351fd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MoneyTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::DB86CA49-A2A0-4CE4-AD9C-41F5469F0EF7::.NETCoreApp,Version=v3.1::Marketplace.Tests.MoneyTest&lt;/TestId&gt;&#xD;
