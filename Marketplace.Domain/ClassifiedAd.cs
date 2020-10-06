@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Linq.Expressions;
+using Marketplace.Framework;
 
 namespace Marketplace.Domain
 {
-    public class ClassifiedAd
+    public class ClassifiedAd : Entity
     {
         public ClassifiedAd(ClassifiedAdId id, UserId ownerId)
         {
@@ -12,6 +12,13 @@ namespace Marketplace.Domain
             State = ClassifiedAdState.Inactive;
 
             EnsureValidState();
+
+            Raise(new Events.ClassifiedAdCreated
+            {
+                Id = id,
+                OwnerId = ownerId
+            });
+
         }
 
         public ClassifiedAdId Id { get; }
@@ -20,18 +27,37 @@ namespace Marketplace.Domain
         {
             Title = title;
             EnsureValidState();
+
+            Raise(new Events.ClassifiedAdTitleChanged
+            {
+                Id = Id,
+                Title = title
+            });
         }
 
         public void UpdateText(ClassifiedAdText text)
         {
             Text = text;
             EnsureValidState();
+            
+            Raise(new Events.ClassifiedAdTextUpdated
+            {
+                Id = Id,
+                AdText = text
+            });
         }
 
         public void UpdatePrice(Price price)
         {
             Price = price;
             EnsureValidState();
+
+            Raise(new Events.ClassifiedAdPriceUpdated
+            {
+                Id = Id,
+                CurrencyCode = price.Currency.CurrencyCode,
+                Price = Price.Amount
+            });
         }
 
         public void RequestToPublish()
@@ -48,6 +74,11 @@ namespace Marketplace.Domain
             State = ClassifiedAdState.PendingPreview;
 
             EnsureValidState();
+
+            Raise(new Events.ClassifiedAdSentForReview
+            {
+                Id = Id
+            });
         }
 
         public ClassifiedAdTitle Title { get; private set; }
