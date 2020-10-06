@@ -1,0 +1,8 @@
+.vs/
+
+Marketplace.Domain/bin/
+Marketplace.Domain/obj/
+Marketplace.Tests/bin/
+Marketplace.Tests/obj/
+Marketplace/bin/
+Marketplace/obj/
