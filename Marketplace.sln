@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketplace", "Marketplace\Marketplace.csproj", "{5FF52269-4BCD-4636-B2DF-7A6FA03A5507}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketplace.Domain", "Marketplace.Domain\Marketplace.Domain.csproj", "{35825926-B919-40C0-898A-BCB240D42C97}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketplace.Tests", "Marketplace.Tests\Marketplace.Tests.csproj", "{DB86CA49-A2A0-4CE4-AD9C-41F5469F0EF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketPlace.Framework", "MarketPlace.Framework\MarketPlace.Framework.csproj", "{5AE4FDA5-5AB6-411B-AE4A-9AC08CC53176}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarketPlace.Framework", "MarketPlace.Framework\MarketPlace.Framework.csproj", "{5AE4FDA5-5AB6-411B-AE4A-9AC08CC53176}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace", "Marketplace\Marketplace.csproj", "{6042D486-30AF-44C3-ABF7-CE9A00CB901A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5FF52269-4BCD-4636-B2DF-7A6FA03A5507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5FF52269-4BCD-4636-B2DF-7A6FA03A5507}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5FF52269-4BCD-4636-B2DF-7A6FA03A5507}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5FF52269-4BCD-4636-B2DF-7A6FA03A5507}.Release|Any CPU.Build.0 = Release|Any CPU
 		{35825926-B919-40C0-898A-BCB240D42C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{35825926-B919-40C0-898A-BCB240D42C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35825926-B919-40C0-898A-BCB240D42C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{5AE4FDA5-5AB6-411B-AE4A-9AC08CC53176}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AE4FDA5-5AB6-411B-AE4A-9AC08CC53176}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AE4FDA5-5AB6-411B-AE4A-9AC08CC53176}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6042D486-30AF-44C3-ABF7-CE9A00CB901A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6042D486-30AF-44C3-ABF7-CE9A00CB901A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6042D486-30AF-44C3-ABF7-CE9A00CB901A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6042D486-30AF-44C3-ABF7-CE9A00CB901A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
