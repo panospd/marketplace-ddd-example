@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Marketplace.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Marketplace.Api
@@ -8,24 +9,48 @@ namespace Marketplace.Api
     {
         private readonly ClassifiedAdsApplicationService _applicationService;
 
-        public ClassifiedAdsCommandsApi(ClassifiedAdsApplicationService _applicationService)
+        public ClassifiedAdsCommandsApi(ClassifiedAdsApplicationService applicationService)
         {
-            this._applicationService = _applicationService;
+            _applicationService = applicationService;
         }
 
         [HttpPost]
         public async Task<IActionResult> Post(Contracts.ClassifiedAds.V1.Create request)
         {
-            _applicationService.Handle(request);
+            await _applicationService.Handle(request);
             return Ok();
         }
-    }
 
-    public class ClassifiedAdsApplicationService
-    {
-        public void Handle(Contracts.ClassifiedAds.V1.Create command)
+        [Route("name")]
+        [HttpPut]
+        public async Task<IActionResult> Put(ClassifiedAds.V1.SetTitle request)
         {
-            // we need to create a bew Classified Ad here
+            await _applicationService.Handle(request);
+            return Ok();
+        }
+
+        [Route("text")]
+        [HttpPut]
+        public async Task<IActionResult> Put(ClassifiedAds.V1.UpdateText request)
+        {
+            await _applicationService.Handle(request);
+            return Ok();
+        }
+
+        [Route("price")]
+        [HttpPut]
+        public async Task<IActionResult> Put(ClassifiedAds.V1.UpdatePrice request)
+        {
+            await _applicationService.Handle(request);
+            return Ok();
+        }
+
+        [Route("publish")]
+        [HttpPut]
+        public async Task<IActionResult> Put(ClassifiedAds.V1.RequestToPublish request)
+        {
+            await _applicationService.Handle(request);
+            return Ok();
         }
     }
 }
