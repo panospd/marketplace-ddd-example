@@ -19,60 +19,48 @@ namespace Marketplace.Api
 
         public async Task Handle(object command)
         {
-            ClassifiedAd classifiedAd;
             switch (command)
             {
                 case ClassifiedAds.V1.Create cmd:
-                    if(await  _store.Exists<ClassifiedAd>(cmd.Id.ToString()))
-                        throw new InvalidOperationException($"Entity with id {cmd.Id} already exists");
-
-                    classifiedAd = new ClassifiedAd(new ClassifiedAdId(cmd.Id), new UserId(cmd.OwnerId));
-
-                    await _store.Save(classifiedAd);
+                    await HandleCreate(cmd);
                     break;
                 case ClassifiedAds.V1.SetTitle cmd:
-                    classifiedAd = await _store.Load<ClassifiedAd>(cmd.Id.ToString());
-
-                    if(classifiedAd == null)
-                        throw new InvalidOperationException($"Entity with id {cmd.Id} cannot be found");
-
-                    classifiedAd.SetTitle(ClassifiedAdTitle.FromString(cmd.Title));
-
-                    await _store.Save(classifiedAd);
+                    await HandleUpdate(cmd.Id, ad => ad.SetTitle(ClassifiedAdTitle.FromString(cmd.Title)));
                     break;
                 case ClassifiedAds.V1.UpdateText cmd:
-                    classifiedAd = await _store.Load<ClassifiedAd>(cmd.Id.ToString());
-
-                    if(classifiedAd == null)
-                        throw new InvalidOperationException($"Entity with id {cmd.Id} cannot be found");
-
-                    classifiedAd.UpdateText(ClassifiedAdText.FromString(cmd.Text));
-
-                    await _store.Save(classifiedAd);
+                    await HandleUpdate(cmd.Id, ad => ad.UpdateText(ClassifiedAdText.FromString(cmd.Text)));
                     break;
                 case ClassifiedAds.V1.UpdatePrice cmd:
-                    classifiedAd = await _store.Load<ClassifiedAd>(cmd.Id.ToString());
-
-                    if(classifiedAd == null)
-                        throw new InvalidOperationException($"Entity with id {cmd.Id} cannot be found");
-
-                    classifiedAd.UpdatePrice(Price.FromDecimal(cmd.Price, cmd.Currency, _currencyLookup));
-
-                    await _store.Save(classifiedAd);
+                    await HandleUpdate(cmd.Id, ad => ad.UpdatePrice(Price.FromDecimal(cmd.Price, cmd.Currency, _currencyLookup)));
                     break;
                 case ClassifiedAds.V1.RequestToPublish cmd:
-                    classifiedAd = await _store.Load<ClassifiedAd>(cmd.Id.ToString());
-
-                    if(classifiedAd == null)
-                        throw new InvalidOperationException($"Entity with id {cmd.Id} cannot be found");
-
-                    classifiedAd.RequestToPublish();
-
-                    await _store.Save(classifiedAd);
+                    await HandleUpdate(cmd.Id, ad => ad.RequestToPublish());
                     break;
                 default:
                     throw new InvalidOperationException($"Command type {command.GetType().FullName} is unknown");
             }
+        }
+
+        private async Task HandleUpdate(Guid classifiedAdId, Action<ClassifiedAd> operation)
+        {
+            var classifiedAd = await _store.Load<ClassifiedAd>(classifiedAdId.ToString());
+
+            if (classifiedAd == null)
+                throw new InvalidOperationException($"Entity with id {classifiedAdId} cannot be found");
+
+            operation.Invoke(classifiedAd);
+
+            await _store.Save(classifiedAd);
+        }
+
+        private async Task HandleCreate(ClassifiedAds.V1.Create cmd)
+        {
+            if (await _store.Exists<ClassifiedAd>(cmd.Id.ToString()))
+                throw new InvalidOperationException($"Entity with id {cmd.Id} already exists");
+
+            var classifiedAd = new ClassifiedAd(new ClassifiedAdId(cmd.Id), new UserId(cmd.OwnerId));
+
+            await _store.Save(classifiedAd);
         }
     }
 }
