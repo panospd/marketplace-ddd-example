@@ -1,26 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using System.Linq;
 using Marketplace.Framework;
 
 namespace Marketplace.Domain
 {
-    public class ClassifiedAd : Entity
+    public class ClassifiedAd : AggregateRoot<ClassifiedAdId>
     {
         public ClassifiedAd(ClassifiedAdId id, UserId ownerId)
         {
+            Pictures = new List<Picture>();
+
             Apply(new Events.ClassifiedAdCreated
             {
                 Id = id,
                 OwnerId = ownerId
             });
         }
-
-        public ClassifiedAdId Id { get; private set; }
         public ClassifiedAdTitle Title { get; private set; }
         public UserId OwnerId { get; private set; }
         public ClassifiedAdText Text { get; private set; }
         public Price Price { get; private set; }
         public ClassifiedAdState State { get; private set; }
         public UserId ApprovedBy { get; private set; }
+        public List<Picture> Pictures { get; private set; }
 
         public void SetTitle(ClassifiedAdTitle title)
         {
@@ -58,6 +62,29 @@ namespace Marketplace.Domain
             });
         }
 
+        public void AddPicture(Uri pictureUri, PictureSize size)
+        {
+            Apply(new Events.PictureAddedToAClassifiedAd
+            {
+                PictureId = new Guid(),
+                ClassifiedAdId = Id,
+                Url = pictureUri.ToString(),
+                Height = size.Height,
+                Width = size.Width,
+                Order = Pictures.Max(x => x.Order)
+            });
+        }
+
+        public void ResizePicture(PictureId pictureId, PictureSize newSize)
+        {
+            var picture = FindPicture(pictureId);
+            
+            if(picture == null)
+                throw new InvalidOperationException("Cannot resize a picture that I don't have");
+
+            picture.Resize(newSize);
+        }
+
         protected override void When(object @event)
         {
             switch (@event)
@@ -79,6 +106,11 @@ namespace Marketplace.Domain
                 case Events.ClassifiedAdSentForReview e:
                     State = ClassifiedAdState.PendingPreview;
                     break;
+                case Events.PictureAddedToAClassifiedAd e:
+                    var picture = new Picture(Apply);
+                    ApplyToEntity(picture, e);
+                    Pictures.Add(picture);
+                    break;
             }
         }
 
@@ -92,25 +124,23 @@ namespace Marketplace.Domain
                     ClassifiedAdState.PendingPreview =>
                     Title != null &&
                     Text != null &&
-                    Price?.Amount > 0,
+                    Price?.Amount > 0 &&
+                    FirstPicture.HasCorrectSize(),
                     ClassifiedAdState.Active =>
                     Title != null &&
                     Text != null &&
                     Price?.Amount > 0 &&
-                    ApprovedBy != null,
+                    ApprovedBy != null &&
+                    FirstPicture.HasCorrectSize(),
                     _ => true
                 });
 
             if(!valid)
                 throw new InvalidEntityStateException(this, $"Post-checks failed in state {State}");
         }
-    }
 
-    public class InvalidEntityStateException : Exception
-    {
-        public InvalidEntityStateException(object entity, string message)
-            :base($"Entity {entity.GetType().Name} state change rejected, {message}")
-        {
-        }
+        private Picture FirstPicture => Pictures.OrderBy(x => x.Order).FirstOrDefault();
+
+        private Picture FindPicture(PictureId id) => Pictures.FirstOrDefault(x => x.Id == id);
     }
 }

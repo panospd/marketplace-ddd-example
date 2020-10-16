@@ -43,14 +43,14 @@ namespace Marketplace.Api
 
         private async Task HandleUpdate(Guid classifiedAdId, Action<ClassifiedAd> operation)
         {
-            var classifiedAd = await _store.Load<ClassifiedAd>(classifiedAdId.ToString());
+            var classifiedAd = await _store.Load<ClassifiedAd, ClassifiedAdId>(classifiedAdId.ToString());
 
             if (classifiedAd == null)
                 throw new InvalidOperationException($"Entity with id {classifiedAdId} cannot be found");
 
             operation.Invoke(classifiedAd);
 
-            await _store.Save(classifiedAd);
+            await _store.Save<ClassifiedAd, ClassifiedAdId>(classifiedAd);
         }
 
         private async Task HandleCreate(ClassifiedAds.V1.Create cmd)
@@ -60,7 +60,7 @@ namespace Marketplace.Api
 
             var classifiedAd = new ClassifiedAd(new ClassifiedAdId(cmd.Id), new UserId(cmd.OwnerId));
 
-            await _store.Save(classifiedAd);
+            await _store.Save<ClassifiedAd, ClassifiedAdId>(classifiedAd);
         }
     }
 }

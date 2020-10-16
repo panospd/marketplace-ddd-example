@@ -7,12 +7,12 @@ namespace Marketplace.Framework
         /// <summary>
         /// Loads an entity by id
         /// </summary>
-        Task<T> Load<T>(string entityId) where T : Entity;
+        Task<T> Load<T, TId>(string entityId) where T : AggregateRoot<TId> where TId : Value<TId>;
 
         /// <summary>
         /// Persists an entity
         /// </summary>
-        Task Save<T>(T entity) where T : Entity;
+        Task Save<T, TId>(T entity) where T : AggregateRoot<TId> where TId : Value<TId>;
 
         /// <summary>
         /// Check if entity with a given id alreadu exists
