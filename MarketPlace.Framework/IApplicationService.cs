@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Marketplace.Api
+namespace MarketPlace.Framework
 {
     public interface IApplicationService
     {

@@ -3,7 +3,8 @@ using System.Linq;
 
 namespace Marketplace.Framework
 {
-    public abstract class AggregateRoot<TId> : IInternalEventHandler where TId : Value<TId>
+    public abstract class AggregateRoot<TId> : IInternalEventHandler 
+        where TId : Value<TId>
     {
         private readonly List<object> _changes;
 

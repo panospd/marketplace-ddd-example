@@ -16,13 +16,17 @@
         <e p="Api" t="Include">
           <e p="ClassifiedAdsApplicationService.cs" t="Include" />
           <e p="ClassifiedAdsCommandsApi.cs" t="Include" />
-          <e p="IApplicationService.cs" t="Include" />
         </e>
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contracts" t="Include">
           <e p="ClassifiedAds.cs" t="Include" />
+        </e>
+        <e p="FixedCurrencyLookup.cs" t="Include" />
+        <e p="Infrastructure" t="Include">
+          <e p="ClassifiedAdRepository.cs" t="Include" />
+          <e p="RavenDbUnitOfWork.cs" t="Include" />
         </e>
         <e p="Marketplace.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -46,6 +50,7 @@
         <e p="ClassifiedAdText.cs" t="Include" />
         <e p="ClassifiedAdTitle.cs" t="Include" />
         <e p="Events.cs" t="Include" />
+        <e p="IClasifiedAdRepository.cs" t="Include" />
         <e p="ICurrencyLookup.cs" t="Include" />
         <e p="InvalidEntityStateException.cs" t="Include" />
         <e p="Marketplace.Domain.csproj" t="IncludeRecursive" />
@@ -67,8 +72,10 @@
         <e p="AggregateRoot.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Entity.cs" t="Include" />
+        <e p="IApplicationService.cs" t="Include" />
         <e p="IEntityStore.cs" t="Include" />
         <e p="IInternalEventHandler.cs" t="Include" />
+        <e p="IUnitOfWork.cs" t="Include" />
         <e p="MarketPlace.Framework.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

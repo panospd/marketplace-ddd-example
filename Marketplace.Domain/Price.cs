@@ -9,7 +9,7 @@ namespace Marketplace.Domain
             new Price(amount, currency, currencyLookup);
 
         internal Price(decimal amount, string currencyCode)
-            : base(amount, new CurrencyDetails { CurrencyCode = currencyCode })
+            : base(amount, new Currency { CurrencyCode = currencyCode })
         {
         }
 

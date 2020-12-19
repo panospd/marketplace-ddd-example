@@ -1,10 +1,14 @@
 using Marketplace.Api;
+using Marketplace.Domain;
+using Marketplace.Framework;
+using Marketplace.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Raven.Client.Documents;
 
 namespace Marketplace
 {
@@ -20,10 +24,25 @@ namespace Marketplace
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<ClassifiedAdsApplicationService>();
+            var store = new DocumentStore
+            {
+                Urls = new[] {"http://localhost/8080"},
+                Database = "Marketplace_Chapter8",
+                Conventions =
+                {
+                    FindIdentityProperty = m => m.Name == "_databaseId"
+                }
+            };
 
-            services.AddControllers();
+            store.Initialize();
 
+            services.AddSingleton<ICurrencyLookup, FixedCurrencyLookup>();
+            services.AddScoped(c => store.OpenAsyncSession());
+            services.AddScoped<IUnitOfWork, RavenDbUnitOfWork>();
+            services.AddScoped<IClassifiedAdRepository, ClassifiedAdRepository>();
+            services.AddScoped<ClassifiedAdsApplicationService>();
+
+            services.AddMvc();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title= "My Api", Version="v1" } );
