@@ -22,28 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MarketPlace.Framework/IUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace.Domain/IClasifiedAdRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/FixedCurrencyLookup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbUnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarketPlace.Framework/AggregateRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarketPlace.Framework/AggregateRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarketPlace.Framework/MarketPlace.Framework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MarketPlace.Framework/MarketPlace.Framework.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ICurrencyLookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ICurrencyLookup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/Marketplace.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/Marketplace.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/Money.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/Money.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/Price.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/Price.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Tests/Marketplace.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Tests/Marketplace.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Tests/MoneyTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Tests/MoneyTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Api/ClassifiedAdsApplicationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Api/ClassifiedAdsApplicationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Api/ClassifiedAdsCommandsApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Api/ClassifiedAdsCommandsApi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Api/IApplicationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarketPlace.Framework/IApplicationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Marketplace.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Marketplace.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Startup.cs" afterDir="false" />
-    </list>
+    <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,7 +118,7 @@
       <workItem from="1602866705592" duration="6881000" />
       <workItem from="1605038659454" duration="593000" />
       <workItem from="1608307695407" duration="1929000" />
-      <workItem from="1608365626088" duration="9142000" />
+      <workItem from="1608365626088" duration="9264000" />
     </task>
     <servers />
   </component>
