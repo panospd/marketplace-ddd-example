@@ -22,7 +22,7 @@ namespace Marketplace.Tests
 
             _classifiedAd.RequestToPublish();
 
-            Assert.Equal(ClassifiedAdState.PendingPreview, _classifiedAd.State);
+            Assert.Equal(ClassifiedAdState.PendingReview, _classifiedAd.State);
         }
 
         [Fact]

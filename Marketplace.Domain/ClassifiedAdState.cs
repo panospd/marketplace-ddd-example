@@ -2,7 +2,7 @@
 {
     public enum ClassifiedAdState
     {
-        PendingPreview,
+        PendingReview,
         Active,
         Inactive,
         MarkedAsSold

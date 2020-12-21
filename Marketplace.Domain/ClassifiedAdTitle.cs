@@ -41,5 +41,10 @@ namespace Marketplace.Domain
             if(value.Length > 100)
                 throw new ArgumentOutOfRangeException("Title cannot be longer than 100 characters", nameof(value));
         }
+
+        // Satisfy the serialization requirements
+        protected ClassifiedAdTitle()
+        {
+        }
     }
 }

@@ -8,6 +8,12 @@ namespace Marketplace.Domain
 {
     public class ClassifiedAd : AggregateRoot<ClassifiedAdId>
     {
+        private string DbId
+        {
+            get => $"ClassifiedAd/{Id.Value}";
+            set {}
+        }
+        
         public ClassifiedAd(ClassifiedAdId id, UserId ownerId)
         {
             Pictures = new List<Picture>();
@@ -104,7 +110,7 @@ namespace Marketplace.Domain
                     Price = new Price(e.Price, e.CurrencyCode);
                     break;
                 case Events.ClassifiedAdSentForReview e:
-                    State = ClassifiedAdState.PendingPreview;
+                    State = ClassifiedAdState.PendingReview;
                     break;
                 case Events.PictureAddedToAClassifiedAd e:
                     var picture = new Picture(Apply);
@@ -121,17 +127,15 @@ namespace Marketplace.Domain
                 OwnerId != null &&
                 (State switch
                 {
-                    ClassifiedAdState.PendingPreview =>
-                    Title != null &&
-                    Text != null &&
-                    Price?.Amount > 0 &&
-                    FirstPicture.HasCorrectSize(),
+                    ClassifiedAdState.PendingReview =>
+                        Title != null
+                        && Text != null
+                        && Price?.Amount > 0,
                     ClassifiedAdState.Active =>
-                    Title != null &&
-                    Text != null &&
-                    Price?.Amount > 0 &&
-                    ApprovedBy != null &&
-                    FirstPicture.HasCorrectSize(),
+                        Title != null
+                        && Text != null
+                        && Price?.Amount > 0
+                        && ApprovedBy != null,
                     _ => true
                 });
 

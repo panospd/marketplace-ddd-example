@@ -26,11 +26,11 @@ namespace Marketplace
         {
             var store = new DocumentStore
             {
-                Urls = new[] {"http://localhost/8080"},
+                Urls = new[] {"http://localhost:8080/"},
                 Database = "Marketplace_Chapter8",
                 Conventions =
                 {
-                    FindIdentityProperty = m => m.Name == "_databaseId"
+                    FindIdentityProperty = m => m.Name == "DbId"
                 }
             };
 
@@ -45,7 +45,7 @@ namespace Marketplace
             services.AddMvc();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title= "My Api", Version="v1" } );
+                c.SwaggerDoc("v1", new OpenApiInfo { Title= "ClassifiedAds", Version="v1" } );
             });
         }
 
