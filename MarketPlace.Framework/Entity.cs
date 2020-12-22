@@ -13,6 +13,10 @@ namespace Marketplace.Framework
             _applier = applier;
         }
         
+        protected Entity()
+        {
+        }
+        
         public TId Id { get; protected set; }
 
         protected void Apply(object @event)

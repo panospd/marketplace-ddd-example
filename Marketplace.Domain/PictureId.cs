@@ -10,6 +10,6 @@ namespace Marketplace.Domain
             Value = value;
         }
 
-        public Guid Value { get; }
+        public Guid Value { get; internal set; }
     }
 }

@@ -1,12 +1,17 @@
 version: '3.5'
 
 services:
-
-  ravendb:
-    container_name: marketplace-ch8-ravendb
-    image: ravendb/ravendb
+  postgres:
+    container_name: marketplace-ch8-postgres
+    image: postgres
     ports:
-      - 8080:8080
+      - 5432:5432
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
-      - RAVEN_Security_UnsecuredAccessAllowed=PublicNetwork
-      - RAVEN_ARGS="--Setup.Mode=None"
+      - POSTGRES_PASSWORD=password
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 9000:8080

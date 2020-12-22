@@ -4,6 +4,7 @@ using Marketplace.Framework;
 using Marketplace.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,22 +25,28 @@ namespace Marketplace
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var store = new DocumentStore
-            {
-                Urls = new[] {"http://localhost:8080/"},
-                Database = "Marketplace_Chapter8",
-                Conventions =
-                {
-                    FindIdentityProperty = m => m.Name == "DbId"
-                }
-            };
+            const string connectionString = "Host=localhost;Database=Marketplace_Chapter8;Username=ddd;Password=book";
 
-            store.Initialize();
+            services
+                .AddEntityFrameworkNpgsql()
+                .AddDbContext<ClassifiedAdDbContext>(options => options.UseNpgsql(connectionString));
+
+            // var store = new DocumentStore
+            // {
+            //     Urls = new[] {"http://localhost:8080/"},
+            //     Database = "Marketplace_Chapter8",
+            //     Conventions =
+            //     {
+            //         FindIdentityProperty = m => m.Name == "DbId"
+            //     }
+            // };
+            //
+            // store.Initialize();
+            //services.AddScoped(c => store.OpenAsyncSession());
 
             services.AddSingleton<ICurrencyLookup, FixedCurrencyLookup>();
-            services.AddScoped(c => store.OpenAsyncSession());
-            services.AddScoped<IUnitOfWork, RavenDbUnitOfWork>();
-            services.AddScoped<IClassifiedAdRepository, ClassifiedAdRepository>();
+            services.AddScoped<IUnitOfWork, EfUnitOfWork>();
+            services.AddScoped<IClassifiedAdRepository, ClassifiedAdRepositoryEF>();
             services.AddScoped<ClassifiedAdsApplicationService>();
 
             services.AddMvc();
@@ -56,13 +63,13 @@ namespace Marketplace
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
+            app.EnsureDatabase();
+            
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

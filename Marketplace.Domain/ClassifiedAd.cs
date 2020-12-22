@@ -8,11 +8,16 @@ namespace Marketplace.Domain
 {
     public class ClassifiedAd : AggregateRoot<ClassifiedAdId>
     {
+        // Properties to handle the persistence
+        public Guid ClassifiedAdId { get; private set; }
+        
         private string DbId
         {
             get => $"ClassifiedAd/{Id.Value}";
             set {}
         }
+        
+        protected ClassifiedAd() { }
         
         public ClassifiedAd(ClassifiedAdId id, UserId ownerId)
         {
@@ -99,6 +104,13 @@ namespace Marketplace.Domain
                     Id = new ClassifiedAdId(e.Id);
                     OwnerId = new UserId(e.OwnerId);
                     State = ClassifiedAdState.Inactive;
+                    
+                    Title = ClassifiedAdTitle.NoTitle;
+                    Text = ClassifiedAdText.NoText;
+                    Price = Price.NoPrice;
+                    ApprovedBy = UserId.NoUser;
+                    
+                    ClassifiedAdId = e.Id;
                     break;
                 case Events.ClassifiedAdTitleChanged e:
                     Title = new ClassifiedAdTitle(e.Title);

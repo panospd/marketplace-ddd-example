@@ -6,6 +6,10 @@ namespace Marketplace.Domain
 {
     public class UserId : Value<UserId>
     {
+        protected UserId()
+        {
+        }
+        
         private Guid Value { get; set; }
 
         public UserId(Guid value)
@@ -17,9 +21,8 @@ namespace Marketplace.Domain
         }
 
         public static implicit operator Guid(UserId self) => self.Value;
-
-        protected UserId()
-        {
-        }
+        
+        public static UserId NoUser =>
+            new UserId();
     }
 }

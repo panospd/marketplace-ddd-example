@@ -6,20 +6,33 @@ namespace Marketplace.Domain
 {
     public class Picture : Entity<PictureId>
     {
+        // Properties to handle the persistence
+        public Guid PictureId
+        {
+            get => Id.Value;
+            set {}
+        }
+        
         public Picture(Action<object> applier)
             :base(applier)
         {
         }
+
+        protected Picture()
+        {
+        }
         
-        internal PictureSize Size { get; private set; }
-        internal Uri Location { get; private set; }
-        internal int Order { get; private set; }
+        public ClassifiedAdId ParentId { get; private set; }
+        public PictureSize Size { get; private set; }
+        public string Location { get; private set; }
+        public int Order { get; private set; }
 
         public void Resize(PictureSize newSize)
         {
             Apply(new Events.ClassifiedAdPictureResized
             {
                 PictureId = Id.Value,
+                ClassifiedAdId = ParentId.Value,
                 Height = newSize.Height,
                 Width = newSize.Width
             });
@@ -30,8 +43,10 @@ namespace Marketplace.Domain
             switch (@event)
             {
                 case Events.PictureAddedToAClassifiedAd e:
+                    ParentId = new ClassifiedAdId(e.ClassifiedAdId);
+                    PictureId = e.PictureId;
                     Id = new PictureId(e.PictureId);
-                    Location = new Uri(e.Url);
+                    Location = e.Url;
                     Size = new PictureSize
                     {
                         Height = e.Height,
@@ -69,7 +84,6 @@ namespace Marketplace.Domain
 
         internal PictureSize()
         {
-
         }
     }
 }
