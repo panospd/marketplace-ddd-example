@@ -1,7 +1,8 @@
 ﻿using System.Threading.Tasks;
-using Marketplace.Domain;
+using Marketplace.Domain.ClassifiedAd;
+using Marketplace.Infrastructure;
 
-namespace Marketplace.Infrastructure
+namespace Marketplace.ClassifiedAd
 {
     public class ClassifiedAdRepositoryEF : IClassifiedAdRepository
     {
@@ -12,7 +13,7 @@ namespace Marketplace.Infrastructure
             _dbContext = dbContext;
         }
 
-        public Task Add(ClassifiedAd entity)
+        public Task Add(Domain.ClassifiedAd.ClassifiedAd entity)
         {
             return _dbContext.ClassifiedAds.AddAsync(entity);
         }
@@ -22,7 +23,7 @@ namespace Marketplace.Infrastructure
             return await _dbContext.ClassifiedAds.FindAsync(id.Value) != null;
         }
         
-        public Task<ClassifiedAd> Load(ClassifiedAdId id)
+        public Task<Domain.ClassifiedAd.ClassifiedAd> Load(ClassifiedAdId id)
         {
             return _dbContext.ClassifiedAds.FindAsync(id.Value);
         }

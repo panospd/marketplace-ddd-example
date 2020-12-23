@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Tracing;
 using System.Linq;
+using Marketplace.Domain.Shared;
 using Marketplace.Framework;
 
-namespace Marketplace.Domain
+namespace Marketplace.Domain.ClassifiedAd
 {
     public class ClassifiedAd : AggregateRoot<ClassifiedAdId>
     {

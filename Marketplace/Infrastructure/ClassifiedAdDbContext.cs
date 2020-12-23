@@ -1,4 +1,5 @@
 ﻿using Marketplace.Domain;
+using Marketplace.Domain.ClassifiedAd;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -14,7 +15,7 @@ namespace Marketplace.Infrastructure
         public ClassifiedAdDbContext(DbContextOptions<ClassifiedAdDbContext> options, ILoggerFactory loggerFactory)
             : base(options) => _loggerFactory = loggerFactory;
         
-        public DbSet<ClassifiedAd> ClassifiedAds { get; set; }
+        public DbSet<Domain.ClassifiedAd.ClassifiedAd> ClassifiedAds { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,9 +30,9 @@ namespace Marketplace.Infrastructure
         }
     }
 
-    public class ClassifiedAdEntityTypeConfiguration : IEntityTypeConfiguration<ClassifiedAd>
+    public class ClassifiedAdEntityTypeConfiguration : IEntityTypeConfiguration<Domain.ClassifiedAd.ClassifiedAd>
     {
-        public void Configure(EntityTypeBuilder<ClassifiedAd> builder)
+        public void Configure(EntityTypeBuilder<Domain.ClassifiedAd.ClassifiedAd> builder)
         {
             builder.HasKey(x => x.ClassifiedAdId);
             builder.OwnsOne(x => x.Id);

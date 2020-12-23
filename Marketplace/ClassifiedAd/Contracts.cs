@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Marketplace.Contracts
+namespace Marketplace.ClassifiedAd
 {
-    public static class ClassifiedAds
+    public static class Contracts
     {
         public static class V1
         {

@@ -1,7 +1,11 @@
-using Marketplace.Api;
+using Marketplace.ClassifiedAd;
 using Marketplace.Domain;
+using Marketplace.Domain.ClassifiedAd;
+using Marketplace.Domain.Shared;
+using Marketplace.Domain.UserProfile;
 using Marketplace.Framework;
 using Marketplace.Infrastructure;
+using Marketplace.UserProfile;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -25,29 +29,38 @@ namespace Marketplace
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            const string connectionString = "Host=localhost;Database=Marketplace_Chapter8;Username=ddd;Password=book";
-
-            services
-                .AddEntityFrameworkNpgsql()
-                .AddDbContext<ClassifiedAdDbContext>(options => options.UseNpgsql(connectionString));
-
-            // var store = new DocumentStore
-            // {
-            //     Urls = new[] {"http://localhost:8080/"},
-            //     Database = "Marketplace_Chapter8",
-            //     Conventions =
-            //     {
-            //         FindIdentityProperty = m => m.Name == "DbId"
-            //     }
-            // };
+            // const string connectionString = "Host=localhost;Database=Marketplace_Chapter8;Username=ddd;Password=book";
             //
-            // store.Initialize();
-            //services.AddScoped(c => store.OpenAsyncSession());
+            // services
+            //     .AddEntityFrameworkNpgsql()
+            //     .AddDbContext<ClassifiedAdDbContext>(options => options.UseNpgsql(connectionString));
+
+             var store = new DocumentStore
+             {
+                 Urls = new[] {"http://localhost:8080/"},
+                 Database = "Marketplace_Chapter9",
+                 Conventions =
+                 {
+                     FindIdentityProperty = m => m.Name == "DbId"
+                 }
+             };
+            
+            store.Initialize();
+            services.AddScoped(c => store.OpenAsyncSession());
+            
+            var purgomalumClient = new PurgomalumClient();
 
             services.AddSingleton<ICurrencyLookup, FixedCurrencyLookup>();
-            services.AddScoped<IUnitOfWork, EfUnitOfWork>();
-            services.AddScoped<IClassifiedAdRepository, ClassifiedAdRepositoryEF>();
+            services.AddScoped<IUnitOfWork, RavenDbUnitOfWork>();
+            
+            services.AddScoped<IClassifiedAdRepository, ClassifiedAdRepository>();
+            services.AddScoped<IUserProfileRepository, UserProfileRepository>();
+            
             services.AddScoped<ClassifiedAdsApplicationService>();
+
+            services.AddScoped(c => new UserProfileApplicationService(c.GetService<IUserProfileRepository>(),
+                c.GetService<IUnitOfWork>(),
+                text => purgomalumClient.CheckForProfanity(text).GetAwaiter().GetResult()));
 
             services.AddMvc();
             services.AddSwaggerGen(c =>

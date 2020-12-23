@@ -14,23 +14,26 @@
     <e p="C:\Users\anast\AppData\Roaming\JetBrains\Rider2020.2\scratches" t="IncludeRecursive" />
     <e p="C:\Users\anast\source\repos\Marketplace" t="IncludeFlat">
       <e p="Marketplace" t="IncludeRecursive">
-        <e p="Api" t="Include">
-          <e p="ClassifiedAdsApplicationService.cs" t="Include" />
-          <e p="ClassifiedAdsCommandsApi.cs" t="Include" />
-        </e>
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Contracts" t="Include">
-          <e p="ClassifiedAds.cs" t="Include" />
-        </e>
-        <e p="FixedCurrencyLookup.cs" t="Include" />
-        <e p="Infrastructure" t="Include">
-          <e p="ClassifiedAdDbContext.cs" t="Include" />
+        <e p="ClassifiedAd" t="Include">
           <e p="ClassifiedAdRepository.cs" t="Include" />
           <e p="ClassifiedAdRepositoryEF.cs" t="Include" />
+          <e p="ClassifiedAdsApplicationService.cs" t="Include" />
+          <e p="ClassifiedAdsCommandsApi.cs" t="Include" />
+          <e p="Contracts.cs" t="Include" />
+        </e>
+        <e p="Contracts" t="Include" />
+        <e p="Exceptions.cs" t="Include" />
+        <e p="Infrastructure" t="Include">
+          <e p="ClassifiedAdDbContext.cs" t="Include" />
           <e p="EfUnitOfWork.cs" t="Include" />
+          <e p="FixedCurrencyLookup.cs" t="Include" />
+          <e p="PurgomalumClient.cs" t="Include" />
+          <e p="RavenDbRepository.cs" t="Include" />
           <e p="RavenDbUnitOfWork.cs" t="Include" />
+          <e p="RequestHandler.cs" t="Include" />
         </e>
         <e p="Marketplace.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -45,20 +48,30 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+        <e p="UserProfile" t="Include">
+          <e p="Contracts.cs" t="Include" />
+          <e p="UserProfileApplicationService.cs" t="Include" />
+          <e p="UserProfileCommandApi.cs" t="Include" />
+          <e p="UserProfileRepository.cs" t="Include" />
+        </e>
       </e>
       <e p="Marketplace.Domain" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="ClassifiedAd.cs" t="Include" />
-        <e p="ClassifiedAdId.cs" t="Include" />
-        <e p="ClassifiedAdState.cs" t="Include" />
-        <e p="ClassifiedAdText.cs" t="Include" />
-        <e p="ClassifiedAdTitle.cs" t="Include" />
-        <e p="Events.cs" t="Include" />
-        <e p="IClasifiedAdRepository.cs" t="Include" />
-        <e p="ICurrencyLookup.cs" t="Include" />
-        <e p="InvalidEntityStateException.cs" t="Include" />
+        <e p="ClassifiedAd" t="Include">
+          <e p="ClassifiedAd.cs" t="Include" />
+          <e p="ClassifiedAdId.cs" t="Include" />
+          <e p="ClassifiedAdState.cs" t="Include" />
+          <e p="ClassifiedAdText.cs" t="Include" />
+          <e p="ClassifiedAdTitle.cs" t="Include" />
+          <e p="Events.cs" t="Include" />
+          <e p="IClasifiedAdRepository.cs" t="Include" />
+          <e p="Picture.cs" t="Include" />
+          <e p="PictureId.cs" t="Include" />
+          <e p="PictureRules.cs" t="Include" />
+          <e p="PictureSize.cs" t="Include" />
+          <e p="Price.cs" t="Include" />
+        </e>
         <e p="Marketplace.Domain.csproj" t="IncludeRecursive" />
-        <e p="Money.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.1" t="Include">
@@ -66,11 +79,21 @@
             </e>
           </e>
         </e>
-        <e p="Picture.cs" t="Include" />
-        <e p="PictureId.cs" t="Include" />
-        <e p="PictureRules.cs" t="Include" />
-        <e p="Price.cs" t="Include" />
-        <e p="UserId.cs" t="Include" />
+        <e p="Shared" t="Include">
+          <e p="ContentModeration.cs" t="Include" />
+          <e p="DomainExceptions.cs" t="Include" />
+          <e p="ICurrencyLookup.cs" t="Include" />
+          <e p="InvalidEntityStateException.cs" t="Include" />
+          <e p="Money.cs" t="Include" />
+          <e p="UserId.cs" t="Include" />
+        </e>
+        <e p="UserProfile" t="Include">
+          <e p="DisplayName.cs" t="Include" />
+          <e p="Events.cs" t="Include" />
+          <e p="FullName.cs" t="Include" />
+          <e p="IUserProfileRepository.cs" t="Include" />
+          <e p="UserProfile.cs" t="Include" />
+        </e>
       </e>
       <e p="MarketPlace.Framework" t="IncludeRecursive">
         <e p="AggregateRoot.cs" t="Include" />
@@ -88,6 +111,7 @@
             </e>
           </e>
         </e>
+        <e p="StringTools.cs" t="Include" />
         <e p="Value.cs" t="Include" />
       </e>
       <e p="Marketplace.sln" t="IncludeFlat" />

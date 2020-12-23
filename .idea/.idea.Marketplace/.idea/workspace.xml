@@ -26,22 +26,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdRepositoryEF.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/EfUnitOfWork.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarketPlace.Framework/StringTools.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/PictureSize.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace.Domain/Shared/ContentModeration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace.Domain/Shared/DomainExceptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace.Domain/UserProfile/DisplayName.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace.Domain/UserProfile/Events.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace.Domain/UserProfile/FullName.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace.Domain/UserProfile/IUserProfileRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/Exceptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/PurgomalumClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/RequestHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/UserProfile/Contracts.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileApplicationService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileCommandApi.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarketPlace.Framework/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarketPlace.Framework/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdId.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdTitle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdTitle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/Events.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/Events.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/Money.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/Money.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/Picture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/Picture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/PictureId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/PictureId.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/Price.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/Price.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/UserId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/UserId.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAdId.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAdState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAdText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdTitle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAdTitle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/Events.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Events.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/IClasifiedAdRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/IClasifiedAdRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ICurrencyLookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/Shared/ICurrencyLookup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/InvalidEntityStateException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/Shared/InvalidEntityStateException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/Money.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/Shared/Money.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/Picture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Picture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/PictureId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/PictureId.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/PictureRules.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/PictureRules.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/Price.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Price.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/UserId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/Shared/UserId.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Tests/ClassifiedAdd_Publish_Spec.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Tests/ClassifiedAdd_Publish_Spec.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Tests/MoneyTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Tests/MoneyTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Api/ClassifiedAdsApplicationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsApplicationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Api/ClassifiedAdsCommandsApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsCommandsApi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Contracts/ClassifiedAds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/Contracts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/FixedCurrencyLookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/FixedCurrencyLookup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdRepositoryEF.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdRepositoryEF.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Marketplace/Marketplace.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Marketplace.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Marketplace/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
@@ -72,37 +99,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Marketplace.Domain/InvalidEntityStateException.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/PictureRules.cs" />
-        <option value="$PROJECT_DIR$/MarketPlace.Framework/IEntityStore.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Marketplace.csproj" />
-        <option value="$PROJECT_DIR$/MarketPlace.Framework/AggregateRoot.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/IClasifiedAdRepository.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ClasifiedAdRepository.cs" />
         <option value="$PROJECT_DIR$/MarketPlace.Framework/IUnitOfWork.cs" />
         <option value="$PROJECT_DIR$/Marketplace/Api/ClassifiedAdsApplicationService.cs" />
         <option value="$PROJECT_DIR$/Marketplace.Domain/ICurrencyLookup.cs" />
         <option value="$PROJECT_DIR$/Marketplace/FixedCurrencyLookup.cs" />
         <option value="$PROJECT_DIR$/MarketPlace.Framework/IApplicationService.cs" />
         <option value="$PROJECT_DIR$/Marketplace/Api/ClassifiedAdsCommandsApi.cs" />
-        <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbUnitOfWork.cs" />
         <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EfUnitOfWork.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdRepository.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdRepositoryEF.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Startup.cs" />
         <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdId.cs" />
         <option value="$PROJECT_DIR$/Marketplace.Domain/PictureId.cs" />
         <option value="$PROJECT_DIR$/Marketplace.Domain/Events.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdDbContext.cs" />
         <option value="$PROJECT_DIR$/MarketPlace.Framework/Entity.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/Picture.cs" />
         <option value="$PROJECT_DIR$/Marketplace.Domain/Money.cs" />
         <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdTitle.cs" />
         <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdText.cs" />
         <option value="$PROJECT_DIR$/Marketplace.Domain/Price.cs" />
         <option value="$PROJECT_DIR$/Marketplace.Domain/UserId.cs" />
         <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd.cs" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/Marketplace.Tests/MoneyTest.cs" />
+        <option value="$PROJECT_DIR$/Marketplace.Domain/Picture.cs" />
+        <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/PictureSize.cs" />
+        <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAdState.cs" />
+        <option value="$PROJECT_DIR$/MarketPlace.Framework/StringTools.cs" />
+        <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/Events.cs" />
+        <option value="$PROJECT_DIR$/Marketplace.Domain/Shared/ContentModeration.cs" />
+        <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/FullName.cs" />
+        <option value="$PROJECT_DIR$/Marketplace.Domain/Shared/DomainExceptions.cs" />
+        <option value="$PROJECT_DIR$/Marketplace.Domain/Shared/UserId.cs" />
+        <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" />
+        <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/IUserProfileRepository.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdDbContext.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdRepository.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdRepositoryEF.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdRepositoryEF.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAds.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/Contracts.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsApplicationService.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/Exceptions.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/UserProfile/Contracts.cs" />
+        <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/DisplayName.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileApplicationService.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbRepository.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/UserProfile/UserProfleRepository.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileRepository.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdRepository.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/RequestHandler.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileCommandApi.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsCommandsApi.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/PurgomalumClient.cs" />
+        <option value="$PROJECT_DIR$/Marketplace/Startup.cs" />
       </list>
     </option>
   </component>
@@ -171,7 +218,9 @@
       <workItem from="1608405047689" duration="1958000" />
       <workItem from="1608567204290" duration="1653000" />
       <workItem from="1608580931971" duration="3613000" />
-      <workItem from="1608622983947" duration="8450000" />
+      <workItem from="1608622983947" duration="8559000" />
+      <workItem from="1608717564594" duration="2519000" />
+      <workItem from="1608722806387" duration="10975000" />
     </task>
     <servers />
   </component>
@@ -196,26 +245,30 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="960" y="441" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1608722714190">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="960" y="441" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608722714190" />
     <state width="1022" height="464" key="DebuggerActiveHint" timestamp="1608582626981">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state width="1022" height="464" key="DebuggerActiveHint/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608582626981" />
-    <state width="2517" height="404" key="GridCell.Tab.0.bottom" timestamp="1608630341987">
+    <state width="2517" height="404" key="GridCell.Tab.0.bottom" timestamp="1608631655199">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.bottom/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608630341987" />
-    <state width="2517" height="404" key="GridCell.Tab.0.center" timestamp="1608630341987">
+    <state width="2517" height="404" key="GridCell.Tab.0.bottom/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608631655199" />
+    <state width="2517" height="404" key="GridCell.Tab.0.center" timestamp="1608631655199">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.center/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608630341987" />
-    <state width="2517" height="404" key="GridCell.Tab.0.left" timestamp="1608630341987">
+    <state width="2517" height="404" key="GridCell.Tab.0.center/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608631655199" />
+    <state width="2517" height="404" key="GridCell.Tab.0.left" timestamp="1608631655199">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.left/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608630341987" />
-    <state width="2517" height="404" key="GridCell.Tab.0.right" timestamp="1608630341987">
+    <state width="2517" height="404" key="GridCell.Tab.0.left/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608631655199" />
+    <state width="2517" height="404" key="GridCell.Tab.0.right" timestamp="1608631655199">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.right/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608630341987" />
+    <state width="2517" height="404" key="GridCell.Tab.0.right/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608631655199" />
     <state width="2517" height="523" key="GridCell.Tab.1.bottom" timestamp="1608584575651">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
@@ -280,10 +333,10 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state width="2517" height="523" key="GridCell.Tab.4.right/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608584575651" />
-    <state x="1114" y="406" key="RiderGenerateDialog" timestamp="1608627342370">
+    <state x="1114" y="406" key="RiderGenerateDialog" timestamp="1608731668170">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="1114" y="406" key="RiderGenerateDialog/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608627342370" />
+    <state x="1114" y="406" key="RiderGenerateDialog/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608731668170" />
     <state x="781" y="350" key="SettingsEditor" timestamp="1608406178205">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
@@ -300,36 +353,36 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="948" y="438" width="663" height="534" key="find.popup/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608405722506" />
-    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup" timestamp="1608630975775">
+    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup" timestamp="1608734140257">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608630975775" />
+    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608734140257" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Marketplace/Api/ClassifiedAdsCommandsApi.cs</url>
+          <url>file://$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsCommandsApi.cs</url>
           <line>47</line>
           <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Api\ClassifiedAdsCommandsApi.cs" initialLine="47">
             <startOffsets>
-              <option value="1636" />
+              <option value="1719" />
             </startOffsets>
             <endOffsets>
-              <option value="1702" />
+              <option value="1785" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Marketplace/Api/ClassifiedAdsApplicationService.cs</url>
-          <line>55</line>
+          <url>file://$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsApplicationService.cs</url>
+          <line>57</line>
           <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Api\ClassifiedAdsApplicationService.cs" initialLine="55">
             <startOffsets>
-              <option value="2186" />
+              <option value="2258" />
             </startOffsets>
             <endOffsets>
-              <option value="2275" />
+              <option value="2347" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />

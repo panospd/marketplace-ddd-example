@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Data;
 using Marketplace.Framework;
 
-namespace Marketplace.Domain
+namespace Marketplace.Domain.ClassifiedAd
 {
     public class Picture : Entity<PictureId>
     {
@@ -62,28 +61,6 @@ namespace Marketplace.Domain
                     };
                     break;
             }
-        }
-    }
-
-    public class PictureSize : Value<PictureSize>
-    {
-        public PictureSize(int width, int height)
-        {
-            if(width <= 0)
-                throw new ArgumentOutOfRangeException(nameof(width), "Picture width must be a positive number");
-
-            if(height <= 0)
-                throw new ArgumentOutOfRangeException(nameof(height), "Picture height mist be a positive number");
-
-            Width = width;
-            Height = height;
-        }
-
-        public int Width { get; internal set; }
-        public int Height { get; internal set; }
-
-        internal PictureSize()
-        {
         }
     }
 }

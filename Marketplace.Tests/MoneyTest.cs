@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Marketplace.Domain;
+using Marketplace.Domain.Shared;
 using Xunit;
 
 namespace Marketplace.Tests
@@ -73,7 +74,7 @@ namespace Marketplace.Tests
             var fistAmount = Money.FromDecimal(5, "USD", CurrencyLookup);
             var secondAmount = Money.FromDecimal(5, "EUR", CurrencyLookup);
 
-            Assert.Throws<CurrencyMisMatchException>(() => fistAmount + secondAmount);
+            Assert.Throws<CurrencyMismatchException>(() => fistAmount + secondAmount);
         }
 
         [Fact]
@@ -82,7 +83,7 @@ namespace Marketplace.Tests
             var fistAmount = Money.FromDecimal(5, "USD", CurrencyLookup);
             var secondAmount = Money.FromDecimal(2, "EUR", CurrencyLookup);
 
-            Assert.Throws<CurrencyMisMatchException>(() => fistAmount - secondAmount);
+            Assert.Throws<CurrencyMismatchException>(() => fistAmount - secondAmount);
         }
     }
 
