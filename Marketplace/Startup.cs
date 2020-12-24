@@ -77,7 +77,7 @@ namespace Marketplace
                 app.UseDeveloperExceptionPage();
             }
             
-            app.EnsureDatabase();
+            // app.EnsureDatabase();
             
             app.UseHttpsRedirection();
             app.UseRouting();

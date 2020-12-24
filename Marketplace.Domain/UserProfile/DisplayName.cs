@@ -12,7 +12,7 @@ namespace Marketplace.Domain.UserProfile
             Value = value;
         }
 
-        public string Value { get; }
+        public string Value { get; internal set; }
 
         public static DisplayName FromString(string displayName, ContentModeration.CheckTextForProfanity hasProfanity)
         {

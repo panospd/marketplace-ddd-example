@@ -6,7 +6,7 @@ namespace Marketplace.Domain.UserProfile
 {
     public class FullName : Value<FullName>
     {
-        public string Value { get; }
+        public string Value { get; internal set; }
 
         internal FullName(string value)
         {
