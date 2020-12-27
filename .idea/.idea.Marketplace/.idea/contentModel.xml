@@ -24,6 +24,7 @@
           <e p="ClassifiedAdsCommandsApi.cs" t="Include" />
           <e p="ClassifiedAdsQueryApi.cs" t="Include" />
           <e p="Contracts.cs" t="Include" />
+          <e p="Queries.cs" t="Include" />
           <e p="QueryModels.cs" t="Include" />
           <e p="ReadModels.cs" t="Include" />
         </e>

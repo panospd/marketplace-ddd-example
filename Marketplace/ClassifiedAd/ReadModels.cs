@@ -15,7 +15,7 @@ namespace Marketplace.ClassifiedAd
             public string[] PhotoUrls { get; set; }
         }
         
-        public class ClassifiedAdListItem
+        public class PublicClassifiedAdListItem
         {
             public Guid ClassifiedAdId { get; set; }
             public string Title { get; set; }
