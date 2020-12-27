@@ -1,21 +1,21 @@
-﻿using Marketplace.Domain;
-using Marketplace.Domain.ClassifiedAd;
+﻿using Marketplace.Domain.ClassifiedAd;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Marketplace.Infrastructure
+namespace Marketplace.Infrastructure.efcore
 {
-    public class ClassifiedAdDbContext : DbContext
+    public class MarketPlaceDbContext : DbContext
     {
         private readonly ILoggerFactory _loggerFactory;
 
-        public ClassifiedAdDbContext(DbContextOptions<ClassifiedAdDbContext> options, ILoggerFactory loggerFactory)
+        public MarketPlaceDbContext(DbContextOptions<MarketPlaceDbContext> options, ILoggerFactory loggerFactory)
             : base(options) => _loggerFactory = loggerFactory;
         
         public DbSet<Domain.ClassifiedAd.ClassifiedAd> ClassifiedAds { get; set; }
+        public DbSet<Domain.UserProfile.UserProfile> UserProfiles { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -27,6 +27,7 @@ namespace Marketplace.Infrastructure
         {
             modelBuilder.ApplyConfiguration(new ClassifiedAdEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new PictureEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new UserProfileEntityTypeConfiguration());
         }
     }
 
@@ -54,16 +55,40 @@ namespace Marketplace.Infrastructure
             builder.OwnsOne(x => x.Size);
         }
     }
+    
+    public class UserProfileEntityTypeConfiguration : IEntityTypeConfiguration<Domain.UserProfile.UserProfile>
+    {
+        public void Configure(EntityTypeBuilder<Domain.UserProfile.UserProfile> builder)
+        {
+            builder.HasKey(x => x.UserProfileId);
+            builder.OwnsOne(x => x.Id);
+            builder.OwnsOne(x => x.DisplayName);
+            builder.OwnsOne(x => x.FullName);
+        }
+    }
 
     public static class AppBuilderDatabaseExtensions
     {
         public static void EnsureDatabase(this IApplicationBuilder app)
         {
             using var serviceScope = app.ApplicationServices.CreateScope();
-            var context = serviceScope.ServiceProvider.GetService<ClassifiedAdDbContext>();
+            var context = serviceScope.ServiceProvider.GetService<MarketPlaceDbContext>();
 
             if(!context.Database.EnsureCreated())
                 context.Database.Migrate();
+        }
+        
+        private static void EnsureContextIsMigrated(DbContext context)
+        {
+            if (!context.Database.EnsureCreated())
+                context.Database.Migrate();
+        }
+        
+        public static IServiceCollection AddPostgresDbContext<T>(this IServiceCollection services, 
+            string connectionString) where T : DbContext
+        {
+            services.AddDbContext<T>(options => options.UseNpgsql(connectionString));
+            return services;
         }
     }
 }

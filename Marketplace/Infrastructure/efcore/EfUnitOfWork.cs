@@ -1,13 +1,13 @@
 ﻿using System.Threading.Tasks;
 using Marketplace.Framework;
 
-namespace Marketplace.Infrastructure
+namespace Marketplace.Infrastructure.efcore
 {
     public class EfUnitOfWork : IUnitOfWork
     {
-        private readonly ClassifiedAdDbContext _dbContext;
+        private readonly MarketPlaceDbContext _dbContext;
 
-        public EfUnitOfWork(ClassifiedAdDbContext dbContext)
+        public EfUnitOfWork(MarketPlaceDbContext dbContext)
         {
             _dbContext = dbContext;
         }

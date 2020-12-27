@@ -1,5 +1,4 @@
-﻿using System;
-using Marketplace.Domain.Shared;
+﻿using Marketplace.Domain.Shared;
 using Marketplace.Domain.UserProfile;
 using Marketplace.Infrastructure;
 using Raven.Client.Documents.Session;

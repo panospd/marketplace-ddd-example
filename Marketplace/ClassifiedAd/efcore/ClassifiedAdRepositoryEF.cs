@@ -1,14 +1,15 @@
 ﻿using System.Threading.Tasks;
 using Marketplace.Domain.ClassifiedAd;
 using Marketplace.Infrastructure;
+using Marketplace.Infrastructure.efcore;
 
-namespace Marketplace.ClassifiedAd
+namespace Marketplace.ClassifiedAd.efcore
 {
     public class ClassifiedAdRepositoryEF : IClassifiedAdRepository
     {
-        private readonly ClassifiedAdDbContext _dbContext;
+        private readonly MarketPlaceDbContext _dbContext;
 
-        public ClassifiedAdRepositoryEF(ClassifiedAdDbContext dbContext)
+        public ClassifiedAdRepositoryEF(MarketPlaceDbContext dbContext)
         {
             _dbContext = dbContext;
         }

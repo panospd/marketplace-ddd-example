@@ -1,3 +1,4 @@
+using System.Data.Common;
 using Marketplace.ClassifiedAd;
 using Marketplace.Domain;
 using Marketplace.Domain.ClassifiedAd;
@@ -13,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Npgsql;
 using Raven.Client.Documents;
 
 namespace Marketplace
@@ -31,9 +33,9 @@ namespace Marketplace
         {
             // const string connectionString = "Host=localhost;Database=Marketplace_Chapter8;Username=ddd;Password=book";
             //
-            // services
-            //     .AddEntityFrameworkNpgsql()
-            //     .AddDbContext<ClassifiedAdDbContext>(options => options.UseNpgsql(connectionString));
+            // services.AddEntityFrameworkNpgsql();
+            // services.AddPostgresDbContext<MarketPlaceDbContext>(connectionString);
+            // services.AddScoped<DbConnection>(c => new NpgsqlConnection(connectionString));
 
              var store = new DocumentStore
              {
