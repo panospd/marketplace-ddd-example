@@ -26,18 +26,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/efcore/ClassifiedAdsQueryApiEF.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/efcore/QueriesDapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/UserProfile/efcore/UserProfileRepositoryEF.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdRepositoryEF.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/efcore/ClassifiedAdRepositoryEF.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/efcore/MarketplaceDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/EfUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/efcore/EfUnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Marketplace.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Marketplace.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,78 +40,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12891E82-5FCE-44A5-81E5-BBBB579C1D49/45/ExpressionValueProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12891E82-5FCE-44A5-81E5-BBBB579C1D49/53/JsonSerializerInternalReader.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/25F/AsyncMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/ce/77fd88cb/GenerateEntityIdOnTheClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAEE48DD-8B3C-4FDD-8960-7748CCB43F89/b9/8556ed89/RequestExecutor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAEE48DD-8B3C-4FDD-8960-7748CCB43F89/1a/1a057daa/NodeSelector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/51E24A0A-94B8-4A40-8B61-093C7CD4D020/2F/SslStream.Implementation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/AD1CAB2C-A6F9-45AF-88EB-98D61D52FD51/A/UriExt.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/e9/433bc595/NodeSelector.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/e6/0c39e605/DocumentStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/65/7f7d811f/MemberInfoExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/35909858-3A4E-483A-954D-61928307F2A4/46/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/e6/0c39e605/DocumentStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/ac/1e049ba0/RequestExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/35909858-3A4E-483A-954D-61928307F2A4/46/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12891E82-5FCE-44A5-81E5-BBBB579C1D49/53/JsonSerializerInternalReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/AD1CAB2C-A6F9-45AF-88EB-98D61D52FD51/A/UriExt.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12891E82-5FCE-44A5-81E5-BBBB579C1D49/45/ExpressionValueProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12891E82-5FCE-44A5-81E5-BBBB579C1D49/54/JsonSerializerInternalWriter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/25F/AsyncMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/ce/77fd88cb/GenerateEntityIdOnTheClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAEE48DD-8B3C-4FDD-8960-7748CCB43F89/1a/1a057daa/NodeSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAEE48DD-8B3C-4FDD-8960-7748CCB43F89/b9/8556ed89/RequestExecutor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/51E24A0A-94B8-4A40-8B61-093C7CD4D020/2F/SslStream.Implementation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/e9/433bc595/NodeSelector.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Marketplace.Domain/PictureId.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/Events.cs" />
-        <option value="$PROJECT_DIR$/MarketPlace.Framework/Entity.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/Money.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdTitle.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAdText.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/Price.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/UserId.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd.cs" />
-        <option value="$PROJECT_DIR$/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/Marketplace.Tests/MoneyTest.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/Picture.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/PictureSize.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAdState.cs" />
-        <option value="$PROJECT_DIR$/MarketPlace.Framework/StringTools.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/Events.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/Shared/ContentModeration.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/Shared/DomainExceptions.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/Shared/UserId.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/IUserProfileRepository.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdDbContext.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdRepository.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ClassifiedAdRepositoryEF.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAds.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/Contracts.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Exceptions.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/UserProfile/Contracts.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileApplicationService.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbRepository.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/UserProfile/UserProfleRepository.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdRepository.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileCommandApi.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsCommandsApi.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/PurgomalumClient.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/FullName.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/DisplayName.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsApplicationService.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/QueryModels.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ReadModels.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/RequestHandler.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EfUnitOfWork.cs" />
-        <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileRepository.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdRepositoryEF.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/Queries.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Infrastructure/MarketplaceDbContext.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/Startup.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/QueriesDapper.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsQueryApi.cs" />
-        <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/efcore/ClassifiedAdsQueryApiEF.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/docker-compose.yml" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1iy4qUSHiu6diY7El4d0Zr2kuvX" />
   <component name="ProjectLevelVcsManager">
@@ -133,6 +73,7 @@
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34995976" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30008045" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="yaml" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -194,7 +135,8 @@
       <workItem from="1608975896467" duration="2586000" />
       <workItem from="1608996442241" duration="1999000" />
       <workItem from="1609060797107" duration="4614000" />
-      <workItem from="1609084444155" duration="4619000" />
+      <workItem from="1609084444155" duration="4752000" />
+      <workItem from="1610790180677" duration="2170000" />
     </task>
     <servers />
   </component>
