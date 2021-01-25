@@ -4,11 +4,10 @@ services:
 
   eventstore:
     container_name: marketplace-eventstore
-    image: eventstore/eventstore
+    image: eventstore/eventstore:5.0.1-xenial
     ports:
       - 2113:2113
       - 1113:1113
     environment:
       - EVENTSTORE_EXT_HTTP_PORT=2113
       - EVENTSTORE_EXT_TCP_PORT=1113
-      - EVENTSTORE_INSECURE=true

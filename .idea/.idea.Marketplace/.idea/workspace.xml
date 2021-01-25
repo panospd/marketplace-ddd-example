@@ -26,7 +26,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Marketplace/HostedService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/EsAggregateStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketPlace.Framework/AggregateRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarketPlace.Framework/AggregateRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketPlace.Framework/IApplicationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarketPlace.Framework/IApplicationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketPlace.Framework/IEntityStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarketPlace.Framework/IEntityStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketPlace.Framework/MarketPlace.Framework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MarketPlace.Framework/MarketPlace.Framework.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Events.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Events.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/Shared/ContentModeration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/Shared/ContentModeration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/UserProfile/DisplayName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/UserProfile/DisplayName.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsApplicationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsApplicationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsCommandsApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsCommandsApi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsQueryApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/Contracts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/Commands.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/Queries.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/QueryModels.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ReadModels.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/efcore/ClassifiedAdRepositoryEF.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/efcore/ClassifiedAdsQueryApiEF.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/efcore/QueriesDapper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Marketplace.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Marketplace.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileApplicationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileApplicationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/UserProfile/efcore/UserProfileRepositoryEF.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +80,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/25F/AsyncMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/ce/77fd88cb/GenerateEntityIdOnTheClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAEE48DD-8B3C-4FDD-8960-7748CCB43F89/1a/1a057daa/NodeSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/318D2799-861E-4377-8FA8-7E428C96ED58/1F/Socket.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAEE48DD-8B3C-4FDD-8960-7748CCB43F89/b9/8556ed89/RequestExecutor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/51E24A0A-94B8-4A40-8B61-093C7CD4D020/2F/SslStream.Implementation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
@@ -55,6 +88,25 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
+      <option value="$PROJECT_DIR$/MarketPlace.Framework/IApplicationService.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/FixedCurrencyLookup.cs" />
+      <option value="$PROJECT_DIR$/MarketPlace.Framework/AggregateRoot.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EsAggregateStore.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/appsettings.json" />
+      <option value="$PROJECT_DIR$/Marketplace/Program.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Marketplace.csproj" />
+      <option value="$PROJECT_DIR$/Marketplace/HostedService.cs" />
+      <option value="$PROJECT_DIR$/MarketPlace.Framework/IEntityStore.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/Contracts.cs" />
+      <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" />
+      <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Events.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsApplicationService.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Startup.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileApplicationService.cs" />
+      <option value="$PROJECT_DIR$/Marketplace.Domain/Shared/ContentModeration.cs" />
+      <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/DisplayName.cs" />
+      <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsCommandsApi.cs" />
       <option value="$PROJECT_DIR$/docker-compose.yml" />
     </changedPaths>
   </component>
@@ -67,8 +119,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34995976" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30008045" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35020748" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -134,7 +186,9 @@
       <workItem from="1609060797107" duration="4614000" />
       <workItem from="1609084444155" duration="4752000" />
       <workItem from="1610790180677" duration="2258000" />
-      <workItem from="1610879634390" duration="738000" />
+      <workItem from="1610879634390" duration="14906000" />
+      <workItem from="1611596735282" duration="686000" />
+      <workItem from="1611600747222" duration="794000" />
     </task>
     <servers />
   </component>
@@ -158,128 +212,21 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="960" y="441" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1608722714190">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state x="960" y="441" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608722714190" />
-    <state width="1022" height="464" key="DebuggerActiveHint" timestamp="1609061917537">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="1022" height="464" key="DebuggerActiveHint/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609061917537" />
-    <state width="2517" height="404" key="GridCell.Tab.0.bottom" timestamp="1609066232991">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.bottom/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232991" />
-    <state width="2517" height="404" key="GridCell.Tab.0.center" timestamp="1609066232991">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.center/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232991" />
-    <state width="2517" height="404" key="GridCell.Tab.0.left" timestamp="1609066232991">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.left/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232991" />
-    <state width="2517" height="404" key="GridCell.Tab.0.right" timestamp="1609066232991">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.right/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232991" />
-    <state width="2517" height="523" key="GridCell.Tab.1.bottom" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.1.bottom/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.1.center" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.1.center/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.1.left" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.1.left/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.1.right" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.1.right/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.2.bottom" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.2.bottom/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.2.center" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.2.center/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.2.left" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.2.left/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.2.right" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.2.right/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.3.bottom" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.3.bottom/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.3.center" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.3.center/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.3.left" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.3.left/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.3.right" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.3.right/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.4.bottom" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.4.bottom/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.4.center" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.4.center/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.4.left" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.4.left/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state width="2517" height="523" key="GridCell.Tab.4.right" timestamp="1609066232987">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="2517" height="523" key="GridCell.Tab.4.right/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609066232987" />
-    <state x="1114" y="406" key="RiderGenerateDialog" timestamp="1609086555095">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state x="1114" y="406" key="RiderGenerateDialog/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609086555095" />
-    <state x="781" y="350" key="SettingsEditor" timestamp="1608998451661">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state x="781" y="350" key="SettingsEditor/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608998451661" />
-    <state width="1288" height="713" key="XDebugger.FullValuePopup" timestamp="1608582610719">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state width="1288" height="713" key="XDebugger.FullValuePopup/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608582610719" />
-    <state x="841" y="442" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1608406187564">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state x="841" y="442" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608406187564" />
-    <state x="948" y="438" width="663" height="534" key="find.popup" timestamp="1608405722506">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state x="948" y="438" width="663" height="534" key="find.popup/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1608405722506" />
-    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup" timestamp="1609088407351">
-      <screen x="0" y="0" width="2560" height="1410" />
-    </state>
-    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.840/0.0.2560.1410@0.0.2560.1410" timestamp="1609088407351" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsCommandsApi.cs</url>
-          <line>47</line>
-          <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Api\ClassifiedAdsCommandsApi.cs" initialLine="47" />
-          <option name="timeStamp" value="2" />
+          <line>21</line>
+          <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\ClassifiedAd\ClassifiedAdsCommandsApi.cs" initialLine="21" containingFunctionPresentation="method 'Post'">
+            <startOffsets>
+              <option value="681" />
+            </startOffsets>
+            <endOffsets>
+              <option value="751" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

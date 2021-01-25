@@ -72,6 +72,11 @@ namespace Marketplace.Domain.ClassifiedAd
                 Id = Id
             });
         }
+        
+        public void Publish(UserId userId) =>
+            Apply(new Events.ClassifiedAdPublished 
+                {Id = Id, ApprovedBy = userId}
+            );
 
         public void AddPicture(Uri pictureUri, PictureSize size)
         {

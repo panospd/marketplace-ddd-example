@@ -1,70 +1,61 @@
-using System.Data.Common;
+using System;
+using EventStore.ClientAPI;
 using Marketplace.ClassifiedAd;
-using Marketplace.Domain;
 using Marketplace.Domain.ClassifiedAd;
 using Marketplace.Domain.Shared;
 using Marketplace.Domain.UserProfile;
 using Marketplace.Framework;
+using MarketPlace.Framework;
 using Marketplace.Infrastructure;
 using Marketplace.UserProfile;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Npgsql;
-using Raven.Client.Documents;
+using Swashbuckle.AspNetCore.Swagger;
+using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 namespace Marketplace
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IHostingEnvironment environment, IConfiguration configuration)
         {
             Configuration = configuration;
+            Environment = environment;
         }
 
         public IConfiguration Configuration { get; }
+        private IHostingEnvironment Environment { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // const string connectionString = "Host=localhost;Database=Marketplace_Chapter8;Username=ddd;Password=book";
-            //
-            // services.AddEntityFrameworkNpgsql();
-            // services.AddPostgresDbContext<MarketPlaceDbContext>(connectionString);
-            // services.AddScoped<DbConnection>(c => new NpgsqlConnection(connectionString));
+            var esConnection = EventStoreConnection.Create(
+                Configuration["eventStore:connectionString"],
+                ConnectionSettings.Create().KeepReconnecting(),
+                Environment.ApplicationName);
 
-             var store = new DocumentStore
-             {
-                 Urls = new[] {"http://localhost:8080/"},
-                 Database = "Marketplace_Chapter9",
-                 Conventions =
-                 {
-                     FindIdentityProperty = m => m.Name == "DbId"
-                 }
-             };
-            
-            store.Initialize();
-            services.AddScoped(c => store.OpenAsyncSession());
+            var store = new EsAggregateStore(esConnection);
             
             var purgomalumClient = new PurgomalumClient();
 
+            services.AddSingleton(esConnection);
+            services.AddSingleton<IAggregateStore>(store);
+
             services.AddSingleton<ICurrencyLookup, FixedCurrencyLookup>();
-            services.AddScoped<IUnitOfWork, RavenDbUnitOfWork>();
             
-            services.AddScoped<IClassifiedAdRepository, ClassifiedAdRepository>();
-            services.AddScoped<IUserProfileRepository, UserProfileRepository>();
-            
-            services.AddScoped<ClassifiedAdsApplicationService>();
+            services.AddSingleton(new ClassifiedAdsApplicationService(
+                store, new FixedCurrencyLookup()));
 
-            services.AddScoped(c => new UserProfileApplicationService(c.GetService<IUserProfileRepository>(),
-                c.GetService<IUnitOfWork>(),
-                text => purgomalumClient.CheckForProfanity(text).GetAwaiter().GetResult()));
+            services.AddSingleton(new UserProfileApplicationService(
+                store, t => purgomalumClient.CheckForProfanity(t)));
 
+            services.AddSingleton<IHostedService, HostedService>();
             services.AddMvc();
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title= "ClassifiedAds", Version="v1" } );

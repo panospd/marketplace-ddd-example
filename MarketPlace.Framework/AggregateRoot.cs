@@ -4,9 +4,9 @@ using System.Linq;
 namespace Marketplace.Framework
 {
     public abstract class AggregateRoot<TId> : IInternalEventHandler 
-        where TId : Value<TId>
     {
         private readonly List<object> _changes;
+        public int Version { get; private set; } = -1;
 
         protected AggregateRoot()
         {
@@ -26,6 +26,15 @@ namespace Marketplace.Framework
 
         public IEnumerable<object> GetChanges() => _changes.AsEnumerable();
 
+        public void Load(IEnumerable<object> history)
+        {
+            foreach (var e in history)
+            {
+                When(e);
+                Version++;
+            }
+        }
+        
         public void ClearChanges() => _changes.Clear();
 
         protected abstract void EnsureValidState();

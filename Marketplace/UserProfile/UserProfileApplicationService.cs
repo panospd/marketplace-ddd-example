@@ -10,15 +10,13 @@ namespace Marketplace.UserProfile
 {
     public class UserProfileApplicationService : IApplicationService
     {
-        private readonly IUserProfileRepository _repository;
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IAggregateStore _store;
         private readonly CheckTextForProfanity _checkText;
 
-        public UserProfileApplicationService(IUserProfileRepository repository, IUnitOfWork unitOfWork, CheckTextForProfanity checkText)
+        public UserProfileApplicationService(IAggregateStore store, CheckTextForProfanity checkText)
         {
-            _repository = repository;
-            _unitOfWork = unitOfWork;
             _checkText = checkText;
+            _store = store;
         }
 
         public async Task Handle(object command)
@@ -44,21 +42,14 @@ namespace Marketplace.UserProfile
             }
         }
 
-        private async Task HandleUpdate(Guid userProfleId, Action<Domain.UserProfile.UserProfile> operation)
+        private Task HandleUpdate(Guid id, Action<Domain.UserProfile.UserProfile> update)
         {
-            var userProfile = await _repository.Load(new UserId(userProfleId));
-            
-            if(userProfile == null)
-                throw new InvalidOperationException($"Entity with id {userProfleId} cannot be found");
-
-            operation(userProfile);
-
-            await _unitOfWork.Commit();
+            return this.HandleUpdate(_store, new UserId(id), update);
         }
 
         private async Task HandleCreate(Contracts.V1.RegisterUser cmd)
         {
-            if(await _repository.Exists(new UserId(cmd.UserId)))
+            if(await _store.Exists<Domain.UserProfile.UserProfile, UserId>(new UserId(cmd.UserId)))
                 throw new InvalidOperationException($"Entity with id {cmd.UserId} already exists");
 
             var userProfile = new Domain.UserProfile.UserProfile(
@@ -66,8 +57,7 @@ namespace Marketplace.UserProfile
                 FullName.FromString(cmd.FullName), 
                 DisplayName.FromString(cmd.DisplayName, _checkText));
 
-            await _repository.Add(userProfile);
-            await _unitOfWork.Commit();
+            await _store.Save<Domain.UserProfile.UserProfile, UserId>(userProfile);
         }
     }
 }

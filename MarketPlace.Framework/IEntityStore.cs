@@ -1,4 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.ServiceModel;
+using System.Threading.Tasks;
+using MarketPlace.Framework;
 
 namespace Marketplace.Framework
 {
@@ -19,5 +22,25 @@ namespace Marketplace.Framework
         /// <typeparam name="T">Entity type</typeparam>
         /// </summary>
         Task<bool> Exists<T>(string entityId);
+    }
+
+    public static class ApplicationServiceExtensions
+    {
+        public static async Task HandleUpdate<T, TId>(
+            this IApplicationService service, 
+            IAggregateStore store, 
+            TId aggregateId, 
+            Action<T> operation)
+            where T : AggregateRoot<TId>
+        {
+            var aggregate = await store.Load<T, TId>(aggregateId);
+
+            if (aggregate == null)
+                throw new InvalidOperationException($"Entity with id {aggregateId.ToString()} cannot be found");
+
+            operation(aggregate);
+
+            await store.Save<T, TId>(aggregate);
+        }
     }
 }

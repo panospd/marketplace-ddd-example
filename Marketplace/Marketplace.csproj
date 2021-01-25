@@ -19,5 +19,9 @@
     <ProjectReference Include="..\Marketplace.Domain\Marketplace.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="appsettings.json" CopyToOutputDirectory="Always" CopyToPublishDirectory="Always" />
+  </ItemGroup>
+
 
 </Project>

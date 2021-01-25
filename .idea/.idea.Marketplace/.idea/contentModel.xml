@@ -18,26 +18,18 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="ClassifiedAd" t="Include">
-          <e p="ClassifiedAdRepository.cs" t="Include" />
           <e p="ClassifiedAdsApplicationService.cs" t="Include" />
           <e p="ClassifiedAdsCommandsApi.cs" t="Include" />
-          <e p="ClassifiedAdsQueryApi.cs" t="Include" />
-          <e p="Contracts.cs" t="Include" />
-          <e p="efcore" t="Include">
-            <e p="ClassifiedAdRepositoryEF.cs" t="Include" />
-            <e p="ClassifiedAdsQueryApiEF.cs" t="Include" />
-            <e p="QueriesDapper.cs" t="Include" />
-          </e>
-          <e p="Queries.cs" t="Include" />
-          <e p="QueryModels.cs" t="Include" />
-          <e p="ReadModels.cs" t="Include" />
+          <e p="Commands.cs" t="Include" />
         </e>
         <e p="Exceptions.cs" t="Include" />
+        <e p="HostedService.cs" t="Include" />
         <e p="Infrastructure" t="Include">
           <e p="efcore" t="Include">
             <e p="EfUnitOfWork.cs" t="Include" />
             <e p="MarketplaceDbContext.cs" t="Include" />
           </e>
+          <e p="EsAggregateStore.cs" t="Include" />
           <e p="FixedCurrencyLookup.cs" t="Include" />
           <e p="PurgomalumClient.cs" t="Include" />
           <e p="RavenDbRepository.cs" t="Include" />
@@ -59,12 +51,8 @@
         <e p="Startup.cs" t="Include" />
         <e p="UserProfile" t="Include">
           <e p="Contracts.cs" t="Include" />
-          <e p="efcore" t="Include">
-            <e p="UserProfileRepositoryEF.cs" t="Include" />
-          </e>
           <e p="UserProfileApplicationService.cs" t="Include" />
           <e p="UserProfileCommandApi.cs" t="Include" />
-          <e p="UserProfileRepository.cs" t="Include" />
         </e>
       </e>
       <e p="Marketplace.Domain" t="IncludeRecursive">

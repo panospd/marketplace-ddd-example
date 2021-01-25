@@ -1,7 +1,9 @@
-﻿namespace Marketplace.Domain.Shared
+﻿using System.Threading.Tasks;
+
+namespace Marketplace.Domain.Shared
 {
     public class ContentModeration
     {
-        public delegate bool CheckTextForProfanity(string text);
+        public delegate Task<bool> CheckTextForProfanity(string text);
     }
 }

@@ -13,4 +13,5 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::DB86CA49-A2A0-4CE4-AD9C-41F5469F0EF7::.NETCoreApp,Version=v3.1::Marketplace.Tests.MoneyTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+&lt;/SessionState&gt;</s:String>
+	</wpf:ResourceDictionary>
