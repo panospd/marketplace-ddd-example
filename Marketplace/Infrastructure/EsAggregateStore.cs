@@ -10,7 +10,7 @@ using Raven.Client;
 
 namespace Marketplace.Infrastructure
 {
-    public class EsAggregateStore : IAggregateStore
+    public partial class EsAggregateStore : IAggregateStore
     {
         private readonly IEventStoreConnection _connection;
 
@@ -67,19 +67,9 @@ namespace Marketplace.Infrastructure
 
             var page = await _connection.ReadStreamEventsForwardAsync(stream, 0, 1024, false);
             
-            aggregate.Load(page.Events.Select(resolvedEvent =>
-            {
-                var meta = JsonConvert.DeserializeObject<EventMetadata>(
-                    Encoding.UTF8.GetString(resolvedEvent.Event.Metadata));
-
-                var datatype = Type.GetType(meta.ClrType);
-
-                var jsonData = Encoding.UTF8.GetString(resolvedEvent.Event.Data);
-
-                var data = JsonConvert.DeserializeObject(jsonData, datatype);
-
-                return data;
-            }).ToArray());
+            aggregate.Load(page.Events
+                .Select(resolvedEvent => resolvedEvent.Deserialize())
+                .ToArray());
 
             return aggregate;
         }
@@ -98,11 +88,6 @@ namespace Marketplace.Infrastructure
         private static byte[] Serialize(object data)
         {
             return Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(data));
-        }
-        
-        private class EventMetadata 
-        {
-            public string ClrType { get; set; }
         }
     }
 }

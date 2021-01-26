@@ -20,17 +20,19 @@
         <e p="ClassifiedAd" t="Include">
           <e p="ClassifiedAdsApplicationService.cs" t="Include" />
           <e p="ClassifiedAdsCommandsApi.cs" t="Include" />
+          <e p="ClassifiedAdsQueryApi.cs" t="Include" />
           <e p="Commands.cs" t="Include" />
+          <e p="Queries.cs" t="Include" />
+          <e p="QueryModels.cs" t="Include" />
         </e>
+        <e p="EventStoreService.cs" t="Include" />
         <e p="Exceptions.cs" t="Include" />
-        <e p="HostedService.cs" t="Include" />
         <e p="Infrastructure" t="Include">
-          <e p="efcore" t="Include">
-            <e p="EfUnitOfWork.cs" t="Include" />
-            <e p="MarketplaceDbContext.cs" t="Include" />
-          </e>
           <e p="EsAggregateStore.cs" t="Include" />
+          <e p="EventDeserializer.cs" t="Include" />
+          <e p="EventMetadata.cs" t="Include" />
           <e p="FixedCurrencyLookup.cs" t="Include" />
+          <e p="ProjectionManager.cs" t="Include" />
           <e p="PurgomalumClient.cs" t="Include" />
           <e p="RavenDbRepository.cs" t="Include" />
           <e p="RavenDbUnitOfWork.cs" t="Include" />
@@ -45,6 +47,9 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
+        <e p="Projections" t="Include">
+          <e p="ReadModels.cs" t="Include" />
+        </e>
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
@@ -102,6 +107,7 @@
         <e p="IApplicationService.cs" t="Include" />
         <e p="IEntityStore.cs" t="Include" />
         <e p="IInternalEventHandler.cs" t="Include" />
+        <e p="IProjection.cs" t="Include" />
         <e p="IUnitOfWork.cs" t="Include" />
         <e p="MarketPlace.Framework.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
