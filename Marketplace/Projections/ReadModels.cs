@@ -11,9 +11,13 @@ namespace Marketplace.Projections
             public decimal Price { get; set; }
             public string CurrencyCode { get; set; }
             public string Description { get; set; }
+            
             public Guid SellerId { get; set; }
+            
             public string SellersDisplayName { get; set; }
+            
             public string SellersPhotoUrl { get; set; }
+            
             public string[] PhotoUrls { get; set; }
         }
 

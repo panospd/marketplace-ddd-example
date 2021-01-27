@@ -15,13 +15,13 @@ namespace Marketplace.Infrastructure
     public class ProjectionManager
     {
         private readonly IEventStoreConnection _connection;
-        private readonly IList<ReadModels.ClassifiedAdDetails> _items;
+        private readonly IProjection[] _projections;
         private EventStoreAllCatchUpSubscription _subscription;
 
-        public ProjectionManager(IEventStoreConnection connection, IList<ReadModels.ClassifiedAdDetails> items)
+        public ProjectionManager(IEventStoreConnection connection, params IProjection[] projections)
         {
             _connection = connection;
-            _items = items;
+            _projections = projections;
         }
 
         public void Start()
@@ -40,41 +40,8 @@ namespace Marketplace.Infrastructure
             var @event = resolvedEvent.Deserialize();
             
             Log.Debug("Projecting event {type}", @event.GetType().Name);
-
-            switch (@event)
-            {
-                case Events.ClassifiedAdCreated e:
-                    _items.Add(new ReadModels.ClassifiedAdDetails
-                    {
-                        ClassifiedAdId = e.Id
-                    });
-                    break;
-                case Events.ClassifiedAdTitleChanged e:
-                    UpdateItem(e.Id, ad => ad.Title = e.Title);
-                    break;
-                case Events.ClassifiedAdTextUpdated e:
-                    UpdateItem(e.Id, ad => ad.Description = e.AdText);
-                    break;
-                case Events.ClassifiedAdPriceUpdated e:
-                    UpdateItem(e.Id, ad =>
-                    {
-                        ad.Price = e.Price;
-                        ad.CurrencyCode = e.CurrencyCode;
-                    });
-                    break;
-            }
             
-            return Task.CompletedTask;
-            // return Task.WhenAll(_projections.Select(x => x.Project(@event)));
-        }
-
-        private void UpdateItem(Guid id, Action<ReadModels.ClassifiedAdDetails> update)
-        {
-            var item = _items.FirstOrDefault(x => x.ClassifiedAdId == id);
-            
-            if(item == null) return;
-
-            update(item);
+            return Task.WhenAll(_projections.Select(x => x.Project(@event)));
         }
     }
 }

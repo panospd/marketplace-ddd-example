@@ -54,11 +54,13 @@ namespace Marketplace
             services.AddSingleton(new UserProfileApplicationService(
                 store, t => purgomalumClient.CheckForProfanity(t)));
 
-            var items = new List<ReadModels.ClassifiedAdDetails>();
+            var classifiedAdDetails = new List<ReadModels.ClassifiedAdDetails>();
+            services.AddSingleton<IEnumerable<ReadModels.ClassifiedAdDetails>>(classifiedAdDetails);
+            
+            var userDetails = new List<ReadModels.UserDetails>();
+            services.AddSingleton<IEnumerable<ReadModels.UserDetails>>(userDetails);
 
-            services.AddSingleton<IEnumerable<ReadModels.ClassifiedAdDetails>>(items);
-
-            var subscription = new ProjectionManager(esConnection, items);
+            var subscription = new ProjectionManager(esConnection, new ClassifiedAdDetailsProjection(classifiedAdDetails), new UserDetailsProjection(userDetails));
 
             services.AddSingleton<IHostedService>(new EventStoreService(esConnection,subscription));
             services.AddMvc();
