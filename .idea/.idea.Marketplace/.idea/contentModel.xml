@@ -31,6 +31,7 @@
           <e p="EsAggregateStore.cs" t="Include" />
           <e p="EventDeserializer.cs" t="Include" />
           <e p="EventMetadata.cs" t="Include" />
+          <e p="EventStoreExtensions.cs" t="Include" />
           <e p="FixedCurrencyLookup.cs" t="Include" />
           <e p="ProjectionManager.cs" t="Include" />
           <e p="PurgomalumClient.cs" t="Include" />
@@ -49,6 +50,7 @@
         <e p="Program.cs" t="Include" />
         <e p="Projections" t="Include">
           <e p="ClassifiedAdDetailsProjection.cs" t="Include" />
+          <e p="ClassifiedAdUpcasters.cs" t="Include" />
           <e p="ReadModels.cs" t="Include" />
           <e p="UserDetailsProjection.cs" t="Include" />
         </e>
@@ -104,10 +106,10 @@
       </e>
       <e p="MarketPlace.Framework" t="IncludeRecursive">
         <e p="AggregateRoot.cs" t="Include" />
+        <e p="ApplicationServiceExtensions.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Entity.cs" t="Include" />
         <e p="IApplicationService.cs" t="Include" />
-        <e p="IEntityStore.cs" t="Include" />
         <e p="IInternalEventHandler.cs" t="Include" />
         <e p="IProjection.cs" t="Include" />
         <e p="IUnitOfWork.cs" t="Include" />

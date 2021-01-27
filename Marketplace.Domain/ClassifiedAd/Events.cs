@@ -37,7 +37,12 @@ namespace Marketplace.Domain.ClassifiedAd
         public class ClassifiedAdPublished
         {
             public Guid Id { get; set; }
+            
             public Guid ApprovedBy { get; set; }
+            
+            public Guid OwnerId { get; set; }
+            
+            public string SellersPhotoUrl { get; set; }
         }
 
         public class PictureAddedToAClassifiedAd

@@ -74,8 +74,12 @@ namespace Marketplace.Domain.ClassifiedAd
         }
         
         public void Publish(UserId userId) =>
-            Apply(new Events.ClassifiedAdPublished 
-                {Id = Id, ApprovedBy = userId}
+            Apply(new Events.ClassifiedAdPublished
+                {
+                    Id = Id, 
+                    ApprovedBy = userId,
+                    OwnerId = OwnerId
+                }
             );
 
         public void AddPicture(Uri pictureUri, PictureSize size)
@@ -129,10 +133,18 @@ namespace Marketplace.Domain.ClassifiedAd
                 case Events.ClassifiedAdSentForReview e:
                     State = ClassifiedAdState.PendingReview;
                     break;
+                case Events.ClassifiedAdPublished e:
+                    ApprovedBy = new UserId(e.ApprovedBy);
+                    State = ClassifiedAdState.Active;
+                    break;
                 case Events.PictureAddedToAClassifiedAd e:
                     var picture = new Picture(Apply);
                     ApplyToEntity(picture, e);
                     Pictures.Add(picture);
+                    break;
+                case Events.ClassifiedAdPictureResized e:
+                    picture = FindPicture(new PictureId(e.PictureId));
+                    ApplyToEntity(picture, @event);
                     break;
             }
         }

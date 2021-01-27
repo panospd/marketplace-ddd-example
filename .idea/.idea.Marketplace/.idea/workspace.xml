@@ -26,8 +26,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/EventStoreExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdUpcasters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketPlace.Framework/IEntityStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarketPlace.Framework/ApplicationServiceExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Events.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Events.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/EsAggregateStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/EsAggregateStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +54,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8E95483A-096F-4F8D-A457-395B24FD8A53/4f/054ef417/EventData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/65/7f7d811f/MemberInfoExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/e6/0c39e605/DocumentStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/ac/1e049ba0/RequestExecutor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -71,10 +80,7 @@
       <option value="$PROJECT_DIR$/Marketplace/appsettings.json" />
       <option value="$PROJECT_DIR$/Marketplace/Marketplace.csproj" />
       <option value="$PROJECT_DIR$/Marketplace/HostedService.cs" />
-      <option value="$PROJECT_DIR$/MarketPlace.Framework/IEntityStore.cs" />
       <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/Contracts.cs" />
-      <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" />
-      <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Events.cs" />
       <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsApplicationService.cs" />
       <option value="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileApplicationService.cs" />
       <option value="$PROJECT_DIR$/Marketplace.Domain/Shared/ContentModeration.cs" />
@@ -87,15 +93,20 @@
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/RequestHandler.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EventMetadata.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EventDeserializer.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EsAggregateStore.cs" />
       <option value="$PROJECT_DIR$/MarketPlace.Framework/AggregateRoot.cs" />
       <option value="$PROJECT_DIR$/Marketplace/EventStoreService.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Program.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Startup.cs" />
       <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs" />
+      <option value="$PROJECT_DIR$/MarketPlace.Framework/IEntityStore.cs" />
+      <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" />
+      <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Events.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EventStoreExtensions.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EsAggregateStore.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdUpcasters.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Startup.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1iy4qUSHiu6diY7El4d0Zr2kuvX" />
@@ -178,7 +189,7 @@
       <workItem from="1611596735282" duration="686000" />
       <workItem from="1611600747222" duration="6028000" />
       <workItem from="1611651871548" duration="80000" />
-      <workItem from="1611735547927" duration="4502000" />
+      <workItem from="1611735547927" duration="9695000" />
     </task>
     <servers />
   </component>
@@ -226,7 +237,7 @@
               <option value="824" />
             </startOffsets>
             <endOffsets>
-              <option value="950" />
+              <option value="951" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
@@ -246,13 +257,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Marketplace/Startup.cs</url>
-          <line>64</line>
+          <line>71</line>
           <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Startup.cs" initialLine="62" containingFunctionPresentation="method 'ConfigureServices'">
             <startOffsets>
-              <option value="2590" />
+              <option value="2908" />
             </startOffsets>
             <endOffsets>
-              <option value="2678" />
+              <option value="2996" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />

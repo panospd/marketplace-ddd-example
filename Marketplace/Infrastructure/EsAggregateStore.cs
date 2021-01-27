@@ -6,11 +6,10 @@ using EventStore.ClientAPI;
 using Marketplace.Framework;
 using MarketPlace.Framework;
 using Newtonsoft.Json;
-using Raven.Client;
 
 namespace Marketplace.Infrastructure
 {
-    public partial class EsAggregateStore : IAggregateStore
+    public class EsAggregateStore : IAggregateStore
     {
         private readonly IEventStoreConnection _connection;
 
@@ -31,27 +30,11 @@ namespace Marketplace.Infrastructure
         {
             if (aggregate == null)
                 throw new ArgumentNullException(nameof(aggregate));
-            
-            var changes = aggregate.GetChanges()
-                .Select(@event =>
-                    new EventData(
-                        eventId: Guid.NewGuid(),
-                        type: @event.GetType().Name,
-                        isJson: true,
-                        data: Serialize(@event),
-                        metadata: Serialize(new EventMetadata
-                            {ClrType = @event.GetType().AssemblyQualifiedName})
-                    ))
-                .ToArray();
-            
-            if (!changes.Any()) return;
-            
+
             var streamName = GetStreamName<T, TId>(aggregate);
-            
-            await _connection.AppendToStreamAsync(
-                streamName,
-                aggregate.Version,
-                changes);
+            var changes = aggregate.GetChanges().ToArray();
+
+            await _connection.AppendEvents(streamName, aggregate.Version, changes);
 
             aggregate.ClearChanges();
         }

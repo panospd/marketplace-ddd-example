@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using EventStore.ClientAPI;
 using Marketplace.ClassifiedAd;
 using Marketplace.Domain.ClassifiedAd;
@@ -60,7 +61,13 @@ namespace Marketplace
             var userDetails = new List<ReadModels.UserDetails>();
             services.AddSingleton<IEnumerable<ReadModels.UserDetails>>(userDetails);
 
-            var subscription = new ProjectionManager(esConnection, new ClassifiedAdDetailsProjection(classifiedAdDetails), new UserDetailsProjection(userDetails));
+            var subscription = new ProjectionManager(
+                esConnection, 
+                new ClassifiedAdDetailsProjection(
+                    classifiedAdDetails, 
+                    userid => userDetails.FirstOrDefault(u => u.UserId == userid)?.DisplayName), 
+                new UserDetailsProjection(userDetails),
+                new ClassifiedAdUpcasters(esConnection, userId => userDetails.FirstOrDefault(u => u.UserId == userId)?.PhotoUrl));
 
             services.AddSingleton<IHostedService>(new EventStoreService(esConnection,subscription));
             services.AddMvc();
