@@ -30,6 +30,9 @@ namespace Marketplace.Projections
                 case Events.UserDisplayNameUpdated e:
                     UpdateItem(e.UserId, i => i.DisplayName = e.DisplayName);
                     break;
+                case Events.ProfilePhotoUploaded e:
+                    UpdateItem(e.UserId, i => i.PhotoUrl = e.PhotoUrl);
+                    break;
             }
             
             return Task.CompletedTask;

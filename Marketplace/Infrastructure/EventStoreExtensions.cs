@@ -18,11 +18,15 @@ namespace Marketplace.Infrastructure
                 return Task.CompletedTask;
 
             var preparedEvents = events
-                .Select(@event => new EventData(eventId: Guid.NewGuid(), type: @event.GetType().Name, isJson: true,
-                    data: Serialize(@event), metadata: Serialize(new EventMetadata
+                .Select(@event => new EventData(
+                    eventId: Guid.NewGuid(), 
+                    type: @event.GetType().Name, 
+                    isJson: true,
+                    data: Serialize(@event), 
+                    metadata: Serialize(new EventMetadata
                     {
-                        ClrType = @events.GetType().AssemblyQualifiedName
-                    })));
+                        ClrType = @event.GetType().AssemblyQualifiedName
+                    }))).ToArray();
 
             return connection.AppendToStreamAsync(streamName, version, preparedEvents);
         }

@@ -26,16 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/EventStoreExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdUpcasters.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarketPlace.Framework/IEntityStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarketPlace.Framework/ApplicationServiceExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Events.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Events.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/EsAggregateStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/EsAggregateStore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/EventStoreExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/EventStoreExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +49,14 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8E95483A-096F-4F8D-A457-395B24FD8A53/4f/054ef417/EventData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/65/7f7d811f/MemberInfoExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/B9122C9D-8E0F-47D3-9D53-746E4CD7F3B5/15/MethodInfoExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/e6/0c39e605/DocumentStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/ac/1e049ba0/RequestExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/286/TaskAwaiter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/35909858-3A4E-483A-954D-61928307F2A4/46/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12891E82-5FCE-44A5-81E5-BBBB579C1D49/53/JsonSerializerInternalReader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/AD1CAB2C-A6F9-45AF-88EB-98D61D52FD51/A/UriExt.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C6663515-F1EC-4E78-BFF8-DF11F22F7BBE/9/Host.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12891E82-5FCE-44A5-81E5-BBBB579C1D49/45/ExpressionValueProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12891E82-5FCE-44A5-81E5-BBBB579C1D49/54/JsonSerializerInternalWriter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/25F/AsyncMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
@@ -68,8 +64,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAEE48DD-8B3C-4FDD-8960-7748CCB43F89/1a/1a057daa/NodeSelector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/318D2799-861E-4377-8FA8-7E428C96ED58/1F/Socket.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAEE48DD-8B3C-4FDD-8960-7748CCB43F89/b9/8556ed89/RequestExecutor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8E95483A-096F-4F8D-A457-395B24FD8A53/d3/ea8be4a8/EventStoreAllCatchUpSubscription.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/51E24A0A-94B8-4A40-8B61-093C7CD4D020/2F/SslStream.Implementation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8E95483A-096F-4F8D-A457-395B24FD8A53/f9/1fd3fece/EventStoreCatchUpSubscription.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C2DC78A9-09F4-4E34-9F9A-67FD9CFEFC98/20/EventMetadata.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/e9/433bc595/NodeSelector.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -93,7 +91,6 @@
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/RequestHandler.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EventMetadata.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EventDeserializer.cs" />
-      <option value="$PROJECT_DIR$/MarketPlace.Framework/AggregateRoot.cs" />
       <option value="$PROJECT_DIR$/Marketplace/EventStoreService.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Program.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" />
@@ -102,11 +99,13 @@
       <option value="$PROJECT_DIR$/MarketPlace.Framework/IEntityStore.cs" />
       <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" />
       <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Events.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EventStoreExtensions.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EsAggregateStore.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdUpcasters.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Startup.cs" />
+      <option value="$PROJECT_DIR$/MarketPlace.Framework/AggregateRoot.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EventStoreExtensions.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1iy4qUSHiu6diY7El4d0Zr2kuvX" />
@@ -189,7 +188,7 @@
       <workItem from="1611596735282" duration="686000" />
       <workItem from="1611600747222" duration="6028000" />
       <workItem from="1611651871548" duration="80000" />
-      <workItem from="1611735547927" duration="9695000" />
+      <workItem from="1611735547927" duration="13084000" />
     </task>
     <servers />
   </component>
@@ -230,43 +229,56 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs</url>
-          <line>28</line>
-          <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Infrastructure\ProjectionManager.cs" initialLine="28" containingFunctionPresentation="method 'Start'">
+          <url>file://$PROJECT_DIR$/Marketplace/UserProfile/UserProfileApplicationService.cs</url>
+          <line>37</line>
+          <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\UserProfile\UserProfileApplicationService.cs" initialLine="37" containingFunctionPresentation="method 'Handle'">
             <startOffsets>
-              <option value="824" />
+              <option value="1432" />
             </startOffsets>
             <endOffsets>
-              <option value="951" />
+              <option value="1525" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Marketplace/EventStoreService.cs</url>
-          <line>22</line>
-          <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\EventStoreService.cs" initialLine="22" containingFunctionPresentation="method 'StartAsync'">
+          <url>file://$PROJECT_DIR$/Marketplace/Infrastructure/EsAggregateStore.cs</url>
+          <line>43</line>
+          <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Infrastructure\EsAggregateStore.cs" initialLine="43" containingFunctionPresentation="method 'Load'">
             <startOffsets>
-              <option value="689" />
+              <option value="1325" />
             </startOffsets>
             <endOffsets>
-              <option value="724" />
+              <option value="1349" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Marketplace/Startup.cs</url>
-          <line>71</line>
-          <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Startup.cs" initialLine="62" containingFunctionPresentation="method 'ConfigureServices'">
+          <url>file://$PROJECT_DIR$/Marketplace/Infrastructure/EsAggregateStore.cs</url>
+          <line>50</line>
+          <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Infrastructure\EsAggregateStore.cs" initialLine="50" containingFunctionPresentation="method 'Load'">
             <startOffsets>
-              <option value="2908" />
+              <option value="1571" />
             </startOffsets>
             <endOffsets>
-              <option value="2996" />
+              <option value="1653" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="7" />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs</url>
+          <line>64</line>
+          <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace.Domain\UserProfile\UserProfile.cs" initialLine="64" containingFunctionPresentation="method 'When'">
+            <startOffsets>
+              <option value="1658" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1673" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
