@@ -26,12 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +79,6 @@
       <option value="$PROJECT_DIR$/Marketplace/UserProfile/UserProfileApplicationService.cs" />
       <option value="$PROJECT_DIR$/Marketplace.Domain/Shared/ContentModeration.cs" />
       <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/DisplayName.cs" />
-      <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" />
       <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsCommandsApi.cs" />
       <option value="$PROJECT_DIR$/docker-compose.yml" />
       <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/QueryModels.cs" />
@@ -95,11 +90,12 @@
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EsAggregateStore.cs" />
       <option value="$PROJECT_DIR$/MarketPlace.Framework/AggregateRoot.cs" />
       <option value="$PROJECT_DIR$/Marketplace/EventStoreService.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Startup.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Program.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Startup.cs" />
+      <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1iy4qUSHiu6diY7El4d0Zr2kuvX" />
@@ -182,7 +178,7 @@
       <workItem from="1611596735282" duration="686000" />
       <workItem from="1611600747222" duration="6028000" />
       <workItem from="1611651871548" duration="80000" />
-      <workItem from="1611735547927" duration="2137000" />
+      <workItem from="1611735547927" duration="4502000" />
     </task>
     <servers />
   </component>
@@ -227,10 +223,10 @@
           <line>28</line>
           <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Infrastructure\ProjectionManager.cs" initialLine="28" containingFunctionPresentation="method 'Start'">
             <startOffsets>
-              <option value="862" />
+              <option value="824" />
             </startOffsets>
             <endOffsets>
-              <option value="988" />
+              <option value="950" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
@@ -250,13 +246,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Marketplace/Startup.cs</url>
-          <line>62</line>
+          <line>64</line>
           <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Startup.cs" initialLine="62" containingFunctionPresentation="method 'ConfigureServices'">
             <startOffsets>
-              <option value="2310" />
+              <option value="2590" />
             </startOffsets>
             <endOffsets>
-              <option value="2398" />
+              <option value="2678" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />

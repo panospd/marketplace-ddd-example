@@ -26,7 +26,7 @@ namespace Marketplace.Infrastructure
 
         public void Start()
         {
-            var settings = new CatchUpSubscriptionSettings(2000, 500, Log.IsEnabled(LogEventLevel.Verbose), true, "try-out-subscription");
+            var settings = new CatchUpSubscriptionSettings(2000, 500, Log.IsEnabled(LogEventLevel.Verbose), false, "try-out-subscription");
 
             _subscription = _connection.SubscribeToAllFrom(Position.Start, settings, EventAppeared);
         }
