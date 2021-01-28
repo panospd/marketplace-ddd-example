@@ -58,7 +58,9 @@ namespace Marketplace.Infrastructure
 
         private static async Task UpdateItem(IAsyncDocumentSession session, Guid id, Action<T> update)
         {
-            var item = await session.LoadAsync<T>(id.ToString());
+            var identifier = id.ToString();
+            
+            var item = await session.LoadAsync<T>(identifier);
             
             if(item == null) return;
 

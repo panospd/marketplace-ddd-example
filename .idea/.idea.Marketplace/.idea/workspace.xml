@@ -26,20 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbProjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/UserProfile/Queries.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsQueryApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsQueryApi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/Queries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/Queries.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/EventStoreService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/EventStoreService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/RequestHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/RequestHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdUpcasters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdUpcasters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbProjection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +70,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/51E24A0A-94B8-4A40-8B61-093C7CD4D020/2F/SslStream.Implementation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8E95483A-096F-4F8D-A457-395B24FD8A53/f9/1fd3fece/EventStoreCatchUpSubscription.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/168/Future.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C2DC78A9-09F4-4E34-9F9A-67FD9CFEFC98/20/EventMetadata.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69CDAFDB-0C7B-481E-9839-58AAC93419E8/e9/433bc595/NodeSelector.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -94,7 +86,6 @@
       <option value="$PROJECT_DIR$/Marketplace.Domain/Shared/ContentModeration.cs" />
       <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/DisplayName.cs" />
       <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsCommandsApi.cs" />
-      <option value="$PROJECT_DIR$/docker-compose.yml" />
       <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/QueryModels.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EventMetadata.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EventDeserializer.cs" />
@@ -110,10 +101,8 @@
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/Checkpoint.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs" />
       <option value="$PROJECT_DIR$/Marketplace/appsettings.json" />
-      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbProjection.cs" />
       <option value="$PROJECT_DIR$/Marketplace/UserProfile/Queries.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" />
       <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/Queries.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Startup.cs" />
@@ -121,6 +110,9 @@
       <option value="$PROJECT_DIR$/Marketplace/EventStoreService.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/RequestHandler.cs" />
       <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsQueryApi.cs" />
+      <option value="$PROJECT_DIR$/docker-compose.yml" />
+      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbProjection.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1iy4qUSHiu6diY7El4d0Zr2kuvX" />
@@ -132,7 +124,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35036203" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35020748" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -205,7 +197,8 @@
       <workItem from="1611651871548" duration="80000" />
       <workItem from="1611735547927" duration="13153000" />
       <workItem from="1611822176730" duration="2221000" />
-      <workItem from="1611849758624" duration="3733000" />
+      <workItem from="1611849758624" duration="3990000" />
+      <workItem from="1611867117769" duration="2667000" />
     </task>
     <servers />
   </component>
@@ -296,6 +289,58 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbProjection.cs</url>
+          <line>40</line>
+          <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Infrastructure\RavenDbProjection.cs" initialLine="40" containingFunctionPresentation="method 'UsingSession'">
+            <startOffsets>
+              <option value="1224" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1249" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs</url>
+          <line>33</line>
+          <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Projections\UserDetailsProjection.cs" initialLine="33" containingFunctionPresentation="method 'Project'">
+            <startOffsets>
+              <option value="1123" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1173" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbProjection.cs</url>
+          <line>62</line>
+          <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Infrastructure\RavenDbProjection.cs" initialLine="60" containingFunctionPresentation="method 'UpdateItem'">
+            <startOffsets>
+              <option value="1876" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1926" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs</url>
+          <line>23</line>
+          <properties documentPath="C:\Users\anast\source\repos\Marketplace\Marketplace\Projections\UserDetailsProjection.cs" initialLine="23" containingFunctionPresentation="lambda expression inside method 'Project'">
+            <startOffsets>
+              <option value="674" />
+            </startOffsets>
+            <endOffsets>
+              <option value="863" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

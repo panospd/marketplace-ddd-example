@@ -23,7 +23,7 @@ namespace Marketplace.Projections
                 case Events.UserRegistered e:
                     Create(() => Task.FromResult(new ReadModels.UserDetails
                     {
-                        UserId = e.UserId.ToString(),
+                        Id = e.UserId.ToString(),
                         DisplayName = e.DisplayName
                     }));
                     break;
