@@ -28,6 +28,7 @@
         <e p="EventStoreService.cs" t="Include" />
         <e p="Exceptions.cs" t="Include" />
         <e p="Infrastructure" t="Include">
+          <e p="Checkpoint.cs" t="Include" />
           <e p="EsAggregateStore.cs" t="Include" />
           <e p="EventDeserializer.cs" t="Include" />
           <e p="EventMetadata.cs" t="Include" />
@@ -110,6 +111,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Entity.cs" t="Include" />
         <e p="IApplicationService.cs" t="Include" />
+        <e p="ICheckpointStore.cs" t="Include" />
         <e p="IInternalEventHandler.cs" t="Include" />
         <e p="IProjection.cs" t="Include" />
         <e p="IUnitOfWork.cs" t="Include" />

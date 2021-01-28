@@ -25,7 +25,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="" />
+    <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MarketPlace.Framework/ICheckpointStore.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/Checkpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +97,6 @@
       <option value="$PROJECT_DIR$/Marketplace/Program.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" />
       <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs" />
       <option value="$PROJECT_DIR$/MarketPlace.Framework/IEntityStore.cs" />
       <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" />
       <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Events.cs" />
@@ -102,6 +107,9 @@
       <option value="$PROJECT_DIR$/MarketPlace.Framework/AggregateRoot.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EventStoreExtensions.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" />
+      <option value="$PROJECT_DIR$/MarketPlace.Framework/ICheckpointStore.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/Checkpoint.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1iy4qUSHiu6diY7El4d0Zr2kuvX" />
@@ -185,6 +193,7 @@
       <workItem from="1611600747222" duration="6028000" />
       <workItem from="1611651871548" duration="80000" />
       <workItem from="1611735547927" duration="13153000" />
+      <workItem from="1611822176730" duration="1663000" />
     </task>
     <servers />
   </component>
