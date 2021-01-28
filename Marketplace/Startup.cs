@@ -17,6 +17,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Raven.Client.Documents;
+using Raven.Client.Documents.Session;
+using Raven.Client.ServerWide;
+using Raven.Client.ServerWide.Operations;
 using Swashbuckle.AspNetCore.Swagger;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
@@ -61,15 +65,21 @@ namespace Marketplace
             var userDetails = new List<ReadModels.UserDetails>();
             services.AddSingleton<IEnumerable<ReadModels.UserDetails>>(userDetails);
 
-            var subscription = new ProjectionManager(
-                esConnection, 
-                new ClassifiedAdDetailsProjection(
-                    classifiedAdDetails, 
-                    userid => userDetails.FirstOrDefault(u => u.UserId == userid)?.DisplayName), 
-                new UserDetailsProjection(userDetails),
-                new ClassifiedAdUpcasters(esConnection, userId => userDetails.FirstOrDefault(u => u.UserId == userId)?.PhotoUrl));
+            var documentStore = ConfigureRavenDb(Configuration.GetSection("ravenDb"));
+            
+            Func<IAsyncDocumentSession> getSession = () => documentStore.OpenAsyncSession();
 
-            services.AddSingleton<IHostedService>(new EventStoreService(esConnection,subscription));
+            services.AddTransient(c => getSession());
+            
+            var projectionManager = new ProjectionManager(esConnection,
+                new RavenDbCheckpointStore(getSession, "readmodels"),
+                new ClassifiedAdDetailsProjection(getSession,
+                    async userId => (await getSession.GetUserDetails(userId))?.DisplayName),
+                new ClassifiedAdUpcasters(esConnection,
+                    async userId => (await getSession.GetUserDetails(userId))?.PhotoUrl),
+                new UserDetailsProjection(getSession));
+
+            services.AddSingleton<IHostedService>(new EventStoreService(esConnection,projectionManager));
             services.AddMvc();
             
             services.AddSwaggerGen(c =>
@@ -105,6 +115,25 @@ namespace Marketplace
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Marketplace api");
             });
+        }
+        
+        private static IDocumentStore ConfigureRavenDb(IConfiguration configuration)
+        {
+            var store = new DocumentStore
+            {
+                Urls = new[] {configuration["server"]},
+                Database = configuration["database"]
+            };
+            store.Initialize();
+            var record = store.Maintenance.Server.Send(
+                new GetDatabaseRecordOperation(store.Database));
+            if (record == null)
+            {
+                store.Maintenance.Server.Send(
+                    new CreateDatabaseOperation(new DatabaseRecord(store.Database)));
+            }
+
+            return store;
         }
     }
 }

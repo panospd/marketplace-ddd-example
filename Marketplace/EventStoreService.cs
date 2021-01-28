@@ -21,7 +21,7 @@ namespace Marketplace
         public async Task StartAsync(CancellationToken cancellationToken)
         {
             await _esConnection.ConnectAsync();
-            _subscription.Start();
+            await _subscription.Start();
         }
 
         public Task StopAsync(CancellationToken cancellationToken)

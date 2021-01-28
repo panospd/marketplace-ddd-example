@@ -26,11 +26,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MarketPlace.Framework/ICheckpointStore.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/Checkpoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbProjection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/UserProfile/Queries.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsQueryApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsQueryApi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/ClassifiedAd/Queries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/ClassifiedAd/Queries.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/EventStoreService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/EventStoreService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/RequestHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/RequestHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdUpcasters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdUpcasters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +86,6 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/MarketPlace.Framework/IApplicationService.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/FixedCurrencyLookup.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/appsettings.json" />
       <option value="$PROJECT_DIR$/Marketplace/Marketplace.csproj" />
       <option value="$PROJECT_DIR$/Marketplace/HostedService.cs" />
       <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/Contracts.cs" />
@@ -88,28 +96,31 @@
       <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsCommandsApi.cs" />
       <option value="$PROJECT_DIR$/docker-compose.yml" />
       <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/QueryModels.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/Queries.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsQueryApi.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/RequestHandler.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EventMetadata.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EventDeserializer.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/EventStoreService.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Program.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" />
       <option value="$PROJECT_DIR$/Marketplace.Domain/UserProfile/UserProfile.cs" />
       <option value="$PROJECT_DIR$/MarketPlace.Framework/IEntityStore.cs" />
       <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/ClassifiedAd.cs" />
       <option value="$PROJECT_DIR$/Marketplace.Domain/ClassifiedAd/Events.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EsAggregateStore.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdUpcasters.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Startup.cs" />
       <option value="$PROJECT_DIR$/MarketPlace.Framework/AggregateRoot.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/EventStoreExtensions.cs" />
-      <option value="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" />
       <option value="$PROJECT_DIR$/MarketPlace.Framework/ICheckpointStore.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/Checkpoint.cs" />
       <option value="$PROJECT_DIR$/Marketplace/Infrastructure/ProjectionManager.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/appsettings.json" />
+      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/RavenDbProjection.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/UserProfile/Queries.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Projections/ReadModels.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdDetailsProjection.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/Queries.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Startup.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Projections/ClassifiedAdUpcasters.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/EventStoreService.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/Infrastructure/RequestHandler.cs" />
+      <option value="$PROJECT_DIR$/Marketplace/ClassifiedAd/ClassifiedAdsQueryApi.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1iy4qUSHiu6diY7El4d0Zr2kuvX" />
@@ -193,7 +204,8 @@
       <workItem from="1611600747222" duration="6028000" />
       <workItem from="1611651871548" duration="80000" />
       <workItem from="1611735547927" duration="13153000" />
-      <workItem from="1611822176730" duration="1663000" />
+      <workItem from="1611822176730" duration="2221000" />
+      <workItem from="1611849758624" duration="3733000" />
     </task>
     <servers />
   </component>

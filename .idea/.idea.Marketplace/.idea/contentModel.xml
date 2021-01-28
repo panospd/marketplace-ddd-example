@@ -36,6 +36,7 @@
           <e p="FixedCurrencyLookup.cs" t="Include" />
           <e p="ProjectionManager.cs" t="Include" />
           <e p="PurgomalumClient.cs" t="Include" />
+          <e p="RavenDbProjection.cs" t="Include" />
           <e p="RavenDbRepository.cs" t="Include" />
           <e p="RavenDbUnitOfWork.cs" t="Include" />
           <e p="RequestHandler.cs" t="Include" />
@@ -61,6 +62,7 @@
         <e p="Startup.cs" t="Include" />
         <e p="UserProfile" t="Include">
           <e p="Contracts.cs" t="Include" />
+          <e p="Queries.cs" t="Include" />
           <e p="UserProfileApplicationService.cs" t="Include" />
           <e p="UserProfileCommandApi.cs" t="Include" />
         </e>

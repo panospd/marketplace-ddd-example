@@ -6,7 +6,7 @@ namespace Marketplace.Projections
     {
         public class ClassifiedAdDetails
         {
-            public Guid ClassifiedAdId { get; set; }
+            public string Id { get; set; }
             public string Title { get; set; }
             public decimal Price { get; set; }
             public string CurrencyCode { get; set; }
@@ -23,7 +23,7 @@ namespace Marketplace.Projections
 
         public class UserDetails
         {
-            public Guid UserId { get; set; }
+            public string UserId { get; set; }
             public string DisplayName { get; set; }
             public string PhotoUrl { get; set; }
         }
