@@ -25,11 +25,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marketplace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Infrastructure/EventStoreExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Infrastructure/EventStoreExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/Projections/UserDetailsProjection.cs" afterDir="false" />
-    </list>
+    <list default="true" id="c58f83ec-e013-4b3e-9e42-fe03f5b513b0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,7 +184,7 @@
       <workItem from="1611596735282" duration="686000" />
       <workItem from="1611600747222" duration="6028000" />
       <workItem from="1611651871548" duration="80000" />
-      <workItem from="1611735547927" duration="13084000" />
+      <workItem from="1611735547927" duration="13153000" />
     </task>
     <servers />
   </component>
